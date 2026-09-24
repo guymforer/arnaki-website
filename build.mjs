@@ -35,9 +35,6 @@ const PAGES = [
 
 // ---- tokens ----------------------------------------------------------------
 const LABELS = {
-  companyNumber: ['מספר חברה (ח.פ.)', 'company number'],
-  addressHe: ['כתובת רשומה', 'registered address (Hebrew)'],
-  addressEn: ['כתובת רשומה (אנגלית)', 'registered address'],
   a11yCoordinatorHe: ['שם רכז/ת הנגישות', 'accessibility coordinator (Hebrew)'],
   a11yCoordinatorEn: ['שם רכז/ת הנגישות (אנגלית)', 'accessibility coordinator'],
   a11yPhone: ['טלפון רכז/ת הנגישות', 'accessibility coordinator phone'],
@@ -90,9 +87,9 @@ function layout(lang, page, body) {
   <script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'Organization', name: cfg.companyEn, url: DOMAIN, email: cfg.supportEmail, brand: { '@type': 'Brand', name: 'Arnaki' } },
+      { '@type': 'Organization', name: 'Arnaki', url: DOMAIN, email: cfg.supportEmail, brand: { '@type': 'Brand', name: 'Arnaki' } },
       { '@type': 'MobileApplication', name: 'Arnaki', alternateName: 'ארנקי', operatingSystem: 'iOS', applicationCategory: 'ShoppingApplication',
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'ILS' }, publisher: { '@type': 'Organization', name: cfg.companyEn } },
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'ILS' }, publisher: { '@type': 'Organization', name: 'Arnaki' } },
     ],
   })}</script>` : '';
 
@@ -147,7 +144,6 @@ ${draft}${body}
     <div class="wrap foot">
       <div class="foot-brand">
         <a class="brand" href="${L('')}"><img src="/assets/icon.svg" alt="" width="30" height="30"><span class="brand-name">Arnaki</span><span class="brand-he" lang="he">ארנקי</span></a>
-        <p>${t('Arnaki היא מוצר של {{companyHe}}, ח.פ. {{companyNumber}}, {{addressHe}}.', 'Arnaki is a product of {{companyEn}}, company no. {{companyNumber}}, {{addressEn}}.')}</p>
         <p><a href="mailto:{{supportEmail}}">{{supportEmail}}</a></p>
       </div>
       <nav aria-label="${t('קישורים משפטיים ותמיכה', 'Legal and support')}">
@@ -161,7 +157,7 @@ ${draft}${body}
       </nav>
     </div>
     <div class="wrap fine">
-      <p>© {{year}} {{${he ? 'companyHe' : 'companyEn'}}}. ${t('Apple, App Store ו-iPhone הם סימנים מסחריים של Apple Inc. שמות וסימנים של מותגים שייכים לבעליהם, ו-Arnaki אינה קשורה אליהם.', 'Apple, App Store and iPhone are trademarks of Apple Inc. Brand names and marks belong to their owners; Arnaki is not affiliated with them.')}</p>
+      <p>© {{year}} Arnaki. ${t('Apple, App Store ו-iPhone הם סימנים מסחריים של Apple Inc. שמות וסימנים של מותגים שייכים לבעליהם, ו-Arnaki אינה קשורה אליהם.', 'Apple, App Store and iPhone are trademarks of Apple Inc. Brand names and marks belong to their owners; Arnaki is not affiliated with them.')}</p>
     </div>
   </footer>
 </body>

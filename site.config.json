@@ -1,29 +1,18 @@
 {
-  "_readme": "Every value here is filled into every page by `node build.mjs`. Empty values show up as a yellow [to complete] mark on the site so nothing goes live blank. Set legalApproved to true only after the lawyer approves the privacy policy and terms.",
-
+  "_readme": "Every value here is filled into every page by `node build.mjs`. Empty values show up as a yellow [to complete] mark on the site so nothing goes live blank. The site names only \"Arnaki\" (no legal-entity name, company number or address) by the founder's choice. Set legalApproved to true only after the lawyer approves the privacy policy and terms.",
   "domain": "https://arnaki.app",
   "appName": "Arnaki",
   "appNameHe": "ארנקי",
-
-  "companyHe": "PayZo בע״מ",
-  "companyEn": "PayZo Ltd.",
-  "companyNumber": "",
-  "addressHe": "",
-  "addressEn": "",
-
   "supportEmail": "support@arnaki.app",
   "privacyEmail": "privacy@arnaki.app",
-
   "a11yCoordinatorHe": "",
   "a11yCoordinatorEn": "",
   "a11yEmail": "accessibility@arnaki.app",
   "a11yPhone": "",
-
   "launchDateHe": "26.10.2026",
   "launchDateEn": "October 26, 2026",
   "lastUpdatedHe": "23.09.2026",
   "lastUpdatedEn": "September 23, 2026",
-
   "appStoreUrl": "",
   "legalApproved": false
 }
