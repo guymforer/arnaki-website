@@ -48,7 +48,7 @@ function tokens(lang) {
   const he = lang === 'he';
   const storeCta = cfg.appStoreUrl
     ? `<a class="btn btn-primary" href="${cfg.appStoreUrl}">${he ? 'להורדה ב-App Store' : 'Download on the App Store'}</a>`
-    : `<span class="btn btn-soon" aria-label="${he ? `בקרוב ב-App Store, ${cfg.launchDateHe}` : `Coming to the App Store on ${cfg.launchDateEn}`}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9s-2-.9-3.3-.9c-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.8-4.2zM14 5.4c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.5-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.4z"/></svg>${he ? `בקרוב ב-App Store · ${cfg.launchDateHe}` : `Coming to the App Store · ${cfg.launchDateEn}`}</span>`;
+    : `<span class="btn btn-soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9s-2-.9-3.3-.9c-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.8-4.2zM14 5.4c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.5-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.4z"/></svg>${he ? `בקרוב ב-App Store · ${cfg.launchDateHe}` : `Coming to the App Store · ${cfg.launchDateEn}`}</span>`;
   return { ...cfg, year, storeCta, lang };
 }
 
@@ -105,6 +105,7 @@ function layout(lang, page, body) {
   <title>${m.title}</title>
   <meta name="description" content="${m.desc}">
   <meta name="theme-color" content="#1D4ED8">
+  <meta name="color-scheme" content="light">
   <link rel="canonical" href="${DOMAIN}${here}">
   <link rel="alternate" hreflang="he" href="${DOMAIN}${pathFor('he', page.slug)}">
   <link rel="alternate" hreflang="en" href="${DOMAIN}${pathFor('en', page.slug)}">
@@ -117,7 +118,8 @@ function layout(lang, page, body) {
   <meta property="og:locale" content="${he ? 'he_IL' : 'en_US'}">
   <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/fonts/heebo-${he ? 'hebrew' : 'latin'}.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/styles.css">${jsonLd}
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/a11y.js" defer></script>${jsonLd}
 </head>
 <body class="${page.legal || page.file !== 'index' ? 'doc' : 'home'}">
   <a class="skip" href="#main">${t('דלג לתוכן הראשי', 'Skip to main content')}</a>

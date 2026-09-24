@@ -4,32 +4,47 @@
         <p class="meta">Last updated: {{lastUpdatedEn}}</p>
       </header>
       <article class="prose">
-        <p>We want Arnaki to be easy for everyone to use, including people with disabilities. This website was built in line with Israel's Equal Rights for Persons with Disabilities (Service Accessibility Adjustments) Regulations, 5773-2013, and Israeli Standard SI 5568, which is based on WCAG 2.0 level AA.</p>
+        <p>We want Arnaki to be easy for everyone to use, including people with disabilities. The arnaki.app website was made accessible in line with Israel's Equal Rights for Persons with Disabilities Law, 5758-1998, the Equal Rights for Persons with Disabilities (Service Accessibility Adjustments) Regulations, 5773-2013, and Israeli Standard SI 5568 "Web Content Accessibility", at level AA. The standard is based on the W3C's WCAG guidelines, and the site was also checked against their current version (WCAG 2.2) at level AA.</p>
 
-        <h2 id="done">What we've done</h2>
+        <h2 id="done">Accessibility features on this site</h2>
         <ul>
-          <li>Pages have a clear heading structure and marked regions (header, main content, footer), plus a "Skip to main content" link.</li>
-          <li>Everything works with a keyboard, with a clearly visible focus indicator.</li>
-          <li>Color contrast meets level AA, and no information is conveyed by color alone.</li>
-          <li>Each page declares its language and text direction (Hebrew right-to-left, English left-to-right).</li>
-          <li>Text can be enlarged up to 200% without losing content, and the layout adapts to small screens.</li>
-          <li>Decorative elements are hidden from screen readers, and all important content is available as text.</li>
-          <li>FAQs use expandable sections that work with a keyboard and screen readers.</li>
-          <li>The site respects your device's "reduce motion" setting and contains no flashing content.</li>
+          <li>Pages have a clear heading structure and marked regions (header, main content, footer), plus a "Skip to main content" link at the top of every page.</li>
+          <li>Everything works with a keyboard, with a clearly visible focus indicator and no keyboard traps.</li>
+          <li>Color contrast meets at least level AA, and no information is conveyed by color alone.</li>
+          <li>Each page declares its language and text direction (Hebrew right-to-left, English left-to-right) and has a unique title.</li>
+          <li>Text can be enlarged to 200% and beyond without losing content or functionality, and the layout adapts to small screens and zoomed views (responsive).</li>
+          <li>Decorative elements are hidden from screen readers, and all important information is available as text. There are no images that carry information.</li>
+          <li>Links have clear text, and FAQs use expandable sections that work with a keyboard and screen readers.</li>
+          <li>The site respects your device's "reduce motion" setting and contains no flashing content, videos or auto-playing content.</li>
+          <li>The site is always shown in light mode; a high-contrast mode is available from the accessibility menu.</li>
         </ul>
-        <p>Testing was done in an up-to-date version of Chrome, on desktop and in mobile view, including keyboard-only navigation.</p>
+
+        <h2 id="menu">The accessibility menu</h2>
+        <p>Every page has a fixed accessibility button (the accessibility symbol, in the bottom corner of the screen). It works with a keyboard and screen readers and opens a menu with these adjustments:</p>
+        <ul>
+          <li><strong>Text size:</strong> three steps up to 150%, and back down.</li>
+          <li><strong>High contrast:</strong> black text on a white background, with dark-blue underlined links.</li>
+          <li><strong>Highlight links</strong> and <strong>highlight headings</strong>: underlines and outlines that make them stand out.</li>
+          <li><strong>Readable font:</strong> replaces the designed fonts with a plain system font.</li>
+          <li><strong>Text spacing:</strong> more space between lines, letters and words.</li>
+          <li><strong>Stop motion:</strong> turns off all animations and transitions.</li>
+        </ul>
+        <p>Your choices are saved on your device only (never sent to us), apply to every page of the site, and can be reset with one click. Browser and operating-system settings such as larger fonts or increased contrast are supported as well.</p>
+
+        <h2 id="tested">How we tested</h2>
+        <p>The latest check was carried out on {{lastUpdatedEn}} and included an automated scan of every page with axe-core (WCAG 2.2 level AA checks) with no findings, keyboard-only navigation, and testing in an up-to-date version of Chrome on desktop and in mobile view, including 200% zoom. This statement is reviewed and updated at least once a year and whenever the site changes significantly.</p>
 
         <h2 id="limits">Known limitations</h2>
-        <p>The screen illustrations on the home page are for illustration only and are hidden from screen readers; everything they show is also written in the text beside them. This statement covers the website. If you run into an accessibility problem in the app itself, please let us know and we'll fix it.</p>
+        <p>The screen illustrations on the home page are for illustration only and are hidden from screen readers; everything they show is also written in the text beside them. This statement covers the arnaki.app website. The app's accessibility is checked separately; if you run into a problem in the app, please let us know and we'll fix it.</p>
 
-        <h2 id="contact">Contact our accessibility coordinator</h2>
-        <p>Found a problem or have a suggestion? We'd like to hear it:</p>
+        <h2 id="contact">Contact us about accessibility</h2>
+        <p>Found a problem, need information in another format, or have a suggestion? Contact our accessibility coordinator:</p>
         <ul>
           <li>Name: {{a11yCoordinatorEn}}</li>
           <li>Phone: <span class="num">{{a11yPhone}}</span></li>
           <li>Email: <a href="mailto:{{a11yEmail}}">{{a11yEmail}}</a></li>
         </ul>
-        <p>To help us help you, include the page address and describe the problem. We'll get back to you within 5 business days.</p>
+        <p>To help us help you, include the page address, describe the problem and tell us which assistive technology you used. We'll get back to you within 5 business days and fix the problem as soon as we can.</p>
 
         <h2 id="company">Company details</h2>
         <p>{{companyEn}}, company no. {{companyNumber}}, {{addressEn}}.</p>
