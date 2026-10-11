@@ -1,4 +1,4 @@
-/* Arnaki accessibility menu. Self-hosted, no dependencies, no network.
+/* PayZo accessibility menu. Self-hosted, no dependencies, no network.
    Adds a floating button that opens a panel of display adjustments (text size,
    high contrast, link and heading emphasis, readable font, text spacing, stop
    motion). Choices are kept in localStorage on this device only. The site is
@@ -7,7 +7,7 @@
 (function () {
   'use strict';
 
-  var KEY = 'arnaki-a11y';
+  var KEY = 'payzo-a11y';
   var root = document.documentElement;
   var he = /^he/i.test(root.lang || 'he');
   var T = he ? {

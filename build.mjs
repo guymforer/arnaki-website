@@ -1,4 +1,4 @@
-// Builds the Arnaki marketing + legal site into ./dist (plain static files).
+// Builds the PayZo marketing + legal site into ./dist (plain static files).
 // Usage: node build.mjs        (no dependencies; Node 18+)
 import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -14,23 +14,23 @@ const year = new Date().getFullYear();
 // ---- pages -----------------------------------------------------------------
 const PAGES = [
   { file: 'index', slug: '', nav: 'home',
-    he: { title: 'Arnaki · ארנקי — הארנק החכם לכרטיסי מתנה', desc: 'כל תווי השי וכרטיסי המתנה במקום אחד, המלצה איך לשלם הכי משתלם, ושוק להחלפת כרטיסים. בקרוב ב-App Store.' },
-    en: { title: 'Arnaki — the smart wallet for gift cards', desc: 'All your gift cards in one place, a recommendation for the best way to pay, and a community marketplace to swap cards. Coming soon to the App Store.' } },
+    he: { title: 'PayZo · פייזו — הארנק החכם לכרטיסי מתנה', desc: 'כל תווי השי וכרטיסי המתנה במקום אחד, המלצה איך לשלם הכי משתלם, ושוק להחלפת כרטיסים. בקרוב ב-App Store.' },
+    en: { title: 'PayZo — the smart wallet for gift cards', desc: 'All your gift cards in one place, a recommendation for the best way to pay, and a community marketplace to swap cards. Coming soon to the App Store.' } },
   { file: 'privacy', slug: 'privacy', legal: true,
-    he: { title: 'מדיניות פרטיות · Arnaki', desc: 'איזה מידע Arnaki אוספת, למה, עם מי הוא משותף ואילו זכויות יש לכם.' },
-    en: { title: 'Privacy Policy · Arnaki', desc: 'What information Arnaki collects, why, who it is shared with, and your rights.' } },
+    he: { title: 'מדיניות פרטיות · PayZo', desc: 'איזה מידע PayZo אוספת, למה, עם מי הוא משותף ואילו זכויות יש לכם.' },
+    en: { title: 'Privacy Policy · PayZo', desc: 'What information PayZo collects, why, who it is shared with, and your rights.' } },
   { file: 'terms', slug: 'terms', legal: true,
-    he: { title: 'תנאי שימוש · Arnaki', desc: 'תנאי השימוש באפליקציה ובשוק ההחלפות של Arnaki, כולל תנאים למוכרים.' },
-    en: { title: 'Terms of Use · Arnaki', desc: 'The terms for using the Arnaki app and its swap marketplace, including seller terms.' } },
+    he: { title: 'תנאי שימוש · PayZo', desc: 'תנאי השימוש באפליקציה ובשוק ההחלפות של PayZo, כולל תנאים למוכרים.' },
+    en: { title: 'Terms of Use · PayZo', desc: 'The terms for using the PayZo app and its swap marketplace, including seller terms.' } },
   { file: 'support', slug: 'support', nav: 'support',
-    he: { title: 'תמיכה · Arnaki', desc: 'צריכים עזרה עם Arnaki? שאלות נפוצות, דיווח על בעיה ויצירת קשר.' },
-    en: { title: 'Support · Arnaki', desc: 'Need help with Arnaki? FAQs, reporting a problem, and how to contact us.' } },
+    he: { title: 'תמיכה · PayZo', desc: 'צריכים עזרה עם PayZo? שאלות נפוצות, דיווח על בעיה ויצירת קשר.' },
+    en: { title: 'Support · PayZo', desc: 'Need help with PayZo? FAQs, reporting a problem, and how to contact us.' } },
   { file: 'delete-account', slug: 'delete-account',
-    he: { title: 'מחיקת חשבון · Arnaki', desc: 'איך מוחקים את חשבון Arnaki ומה קורה למידע שלכם.' },
-    en: { title: 'Delete your account · Arnaki', desc: 'How to delete your Arnaki account and what happens to your data.' } },
+    he: { title: 'מחיקת חשבון · PayZo', desc: 'איך מוחקים את חשבון PayZo ומה קורה למידע שלכם.' },
+    en: { title: 'Delete your account · PayZo', desc: 'How to delete your PayZo account and what happens to your data.' } },
   { file: 'accessibility', slug: 'accessibility',
-    he: { title: 'הצהרת נגישות · Arnaki', desc: 'הצהרת הנגישות של אתר Arnaki ופרטי רכז הנגישות.' },
-    en: { title: 'Accessibility Statement · Arnaki', desc: 'The accessibility statement for the Arnaki website and how to reach our accessibility coordinator.' } },
+    he: { title: 'הצהרת נגישות · PayZo', desc: 'הצהרת הנגישות של אתר PayZo ופרטי רכז הנגישות.' },
+    en: { title: 'Accessibility Statement · PayZo', desc: 'The accessibility statement for the PayZo website and how to reach our accessibility coordinator.' } },
 ];
 
 // ---- tokens ----------------------------------------------------------------
@@ -87,9 +87,9 @@ function layout(lang, page, body) {
   <script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'Organization', name: 'Arnaki', url: DOMAIN, email: cfg.supportEmail, brand: { '@type': 'Brand', name: 'Arnaki' } },
-      { '@type': 'MobileApplication', name: 'Arnaki', alternateName: 'ארנקי', operatingSystem: 'iOS', applicationCategory: 'ShoppingApplication',
-        offers: { '@type': 'Offer', price: '0', priceCurrency: 'ILS' }, publisher: { '@type': 'Organization', name: 'Arnaki' } },
+      { '@type': 'Organization', name: 'PayZo', url: DOMAIN, email: cfg.supportEmail, brand: { '@type': 'Brand', name: 'PayZo' } },
+      { '@type': 'MobileApplication', name: 'PayZo', alternateName: 'פייזו', operatingSystem: 'iOS', applicationCategory: 'ShoppingApplication',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'ILS' }, publisher: { '@type': 'Organization', name: 'PayZo' } },
     ],
   })}</script>` : '';
 
@@ -108,7 +108,7 @@ function layout(lang, page, body) {
   <link rel="alternate" hreflang="en" href="${DOMAIN}${pathFor('en', page.slug)}">
   <link rel="alternate" hreflang="x-default" href="${DOMAIN}${pathFor('he', page.slug)}">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Arnaki">
+  <meta property="og:site_name" content="PayZo">
   <meta property="og:title" content="${m.title}">
   <meta property="og:description" content="${m.desc}">
   <meta property="og:url" content="${DOMAIN}${here}">
@@ -122,9 +122,9 @@ function layout(lang, page, body) {
   <a class="skip" href="#main">${t('דלג לתוכן הראשי', 'Skip to main content')}</a>
   <header class="site-header">
     <div class="wrap bar">
-      <a class="brand" href="${L('')}" aria-label="${t('Arnaki, לעמוד הבית', 'Arnaki home')}">
+      <a class="brand" href="${L('')}" aria-label="${t('PayZo, לעמוד הבית', 'PayZo home')}">
         <img src="/assets/icon.svg" alt="" width="34" height="34">
-        <span class="brand-name">Arnaki</span><span class="brand-he" lang="he">ארנקי</span>
+        <span class="brand-name">PayZo</span><span class="brand-he" lang="he">פייזו</span>
       </a>
       <nav aria-label="${t('ניווט ראשי', 'Main')}">
         <ul class="nav">
@@ -143,7 +143,7 @@ ${draft}${body}
   <footer class="site-footer">
     <div class="wrap foot">
       <div class="foot-brand">
-        <a class="brand" href="${L('')}"><img src="/assets/icon.svg" alt="" width="30" height="30"><span class="brand-name">Arnaki</span><span class="brand-he" lang="he">ארנקי</span></a>
+        <a class="brand" href="${L('')}"><img src="/assets/icon.svg" alt="" width="30" height="30"><span class="brand-name">PayZo</span><span class="brand-he" lang="he">פייזו</span></a>
         <p><a href="mailto:{{supportEmail}}">{{supportEmail}}</a></p>
       </div>
       <nav aria-label="${t('קישורים משפטיים ותמיכה', 'Legal and support')}">
@@ -157,7 +157,7 @@ ${draft}${body}
       </nav>
     </div>
     <div class="wrap fine">
-      <p>© {{year}} Arnaki. ${t('Apple, App Store ו-iPhone הם סימנים מסחריים של Apple Inc. שמות וסימנים של מותגים שייכים לבעליהם, ו-Arnaki אינה קשורה אליהם.', 'Apple, App Store and iPhone are trademarks of Apple Inc. Brand names and marks belong to their owners; Arnaki is not affiliated with them.')}</p>
+      <p>© {{year}} PayZo. ${t('Apple, App Store ו-iPhone הם סימנים מסחריים של Apple Inc. שמות וסימנים של מותגים שייכים לבעליהם, ו-PayZo אינה קשורה אליהם.', 'Apple, App Store and iPhone are trademarks of Apple Inc. Brand names and marks belong to their owners; PayZo is not affiliated with them.')}</p>
     </div>
   </footer>
 </body>
@@ -183,7 +183,7 @@ for (const lang of ['he', 'en']) {
 }
 
 // 404 (bilingual, no layout tokens needed beyond the basics)
-const notFound = fill(layout('he', { file: '404', slug: '', he: { title: 'העמוד לא נמצא · Arnaki', desc: '' }, en: { title: 'Page not found · Arnaki', desc: '' } },
+const notFound = fill(layout('he', { file: '404', slug: '', he: { title: 'העמוד לא נמצא · PayZo', desc: '' }, en: { title: 'Page not found · PayZo', desc: '' } },
   `<section class="wrap narrow notfound"><h1>העמוד לא נמצא</h1><p>ייתכן שהקישור שגוי או שהעמוד הועבר.</p><p><a class="btn btn-primary" href="/">לעמוד הבית</a> <a class="btn btn-ghost" href="/en/" lang="en" dir="ltr">English home</a></p></section>`), 'he');
 writeFileSync(join(DIST, '404.html'), notFound);
 

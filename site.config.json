@@ -1,8 +1,8 @@
 {
-  "_readme": "Every value here is filled into every page by `node build.mjs`. Empty values show up as a yellow [to complete] mark on the site so nothing goes live blank. The site names only \"Arnaki\" (no legal-entity name, company number or address) by the founder's choice. Set legalApproved to true only after the lawyer approves the privacy policy and terms.",
+  "_readme": "Every value here is filled into every page by `node build.mjs`. Empty values show up as a yellow [to complete] mark on the site so nothing goes live blank. The site names only \"PayZo\" (no legal-entity name, company number or address) by the founder's choice. Set legalApproved to true only after the lawyer approves the privacy policy and terms.",
   "domain": "https://arnaki.app",
-  "appName": "Arnaki",
-  "appNameHe": "ארנקי",
+  "appName": "PayZo",
+  "appNameHe": "פייזו",
   "supportEmail": "support@arnaki.app",
   "privacyEmail": "privacy@arnaki.app",
   "a11yCoordinatorHe": "",
