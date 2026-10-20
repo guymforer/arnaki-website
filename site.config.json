@@ -1,5 +1,5 @@
 {
-  "_readme": "Every value here is filled into every page by `node build.mjs`. Empty values show up as a yellow [to complete] mark on the site so nothing goes live blank. The site names only \"PayZo\" (no legal-entity name, company number or address) by the founder's choice. Set legalApproved to true only after the lawyer approves the privacy policy and terms.",
+  "_readme": "Every value here is filled into every page by `node build.mjs`. Empty values show up as a yellow [to complete] mark on the site so nothing goes live blank. The terms and privacy pages name the operator (Guy Moshe Forer, Ness Ziona) since 20.10.2026. legalApproved=true hides the draft banner (founder's decision, 20.10.2026, before the lawyer's review).",
   "domain": "https://arnaki.app",
   "appName": "PayZo",
   "appNameHe": "פייזו",
@@ -16,5 +16,5 @@
   "lastUpdatedEn": "September 23, 2026",
   "legalUpdatedEn": "October 20, 2026",
   "appStoreUrl": "",
-  "legalApproved": false
+  "legalApproved": true
 }
