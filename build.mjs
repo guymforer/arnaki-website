@@ -14,14 +14,14 @@ const year = new Date().getFullYear();
 // ---- pages -----------------------------------------------------------------
 const PAGES = [
   { file: 'index', slug: '', nav: 'home',
-    he: { title: 'PayZo · פייזו — הארנק החכם לכרטיסי מתנה', desc: 'כל תווי השי וכרטיסי המתנה במקום אחד, המלצה איך לשלם הכי משתלם, ושוק להחלפת כרטיסים. בקרוב ב-App Store.' },
-    en: { title: 'PayZo — the smart wallet for gift cards', desc: 'All your gift cards in one place, a recommendation for the best way to pay, and a community marketplace to swap cards. Coming soon to the App Store.' } },
+    he: { title: 'PayZo · פייזו — הארנק החכם לכרטיסי מתנה', desc: 'כל תווי השי וכרטיסי המתנה במקום אחד, המלצה איך לשלם הכי משתלם, ושוק כרטיסים עם צ׳אט בין משתמשים. בקרוב ב-App Store.' },
+    en: { title: 'PayZo — the smart wallet for gift cards', desc: 'All your gift cards in one place, a recommendation for the best way to pay, and a community marketplace to list cards and chat. Coming soon to the App Store.' } },
   { file: 'privacy', slug: 'privacy', legal: true,
     he: { title: 'מדיניות פרטיות · PayZo', desc: 'איזה מידע PayZo אוספת, למה, עם מי הוא משותף ואילו זכויות יש לכם.' },
     en: { title: 'Privacy Policy · PayZo', desc: 'What information PayZo collects, why, who it is shared with, and your rights.' } },
   { file: 'terms', slug: 'terms', legal: true,
-    he: { title: 'תנאי שימוש · PayZo', desc: 'תנאי השימוש באפליקציה ובשוק ההחלפות של PayZo, כולל תנאים למוכרים.' },
-    en: { title: 'Terms of Use · PayZo', desc: 'The terms for using the PayZo app and its swap marketplace, including seller terms.' } },
+    he: { title: 'תנאי שימוש · PayZo', desc: 'תנאי השימוש באפליקציה ובשוק הכרטיסים של PayZo, כולל תנאים למוכרים.' },
+    en: { title: 'Terms of Use · PayZo', desc: 'The terms for using the PayZo app and its card marketplace, including seller terms.' } },
   { file: 'support', slug: 'support', nav: 'support',
     he: { title: 'תמיכה · PayZo', desc: 'צריכים עזרה עם PayZo? שאלות נפוצות, דיווח על בעיה ויצירת קשר.' },
     en: { title: 'Support · PayZo', desc: 'Need help with PayZo? FAQs, reporting a problem, and how to contact us.' } },
