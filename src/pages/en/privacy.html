@@ -1,110 +1,167 @@
     <div class="wrap narrow">
       <header class="doc-head">
         <h1>Privacy Policy</h1>
-        <p class="meta">Last updated: {{lastUpdatedEn}}</p>
+        <p class="meta">Last updated: {{legalUpdatedEn}}</p>
       </header>
       <article class="prose">
         <div class="callout">
-          <p><strong>In short:</strong> we collect only what PayZo needs to work: your account details, the cards you add, and your activity on the marketplace and in chat. Card numbers and codes are stored encrypted. We don't sell your information, use it for advertising, or track you. You can delete your account from inside the app at any time.</p>
+          <p><strong>In short:</strong> we collect only what's needed to run the wallet, Smart Pay, the marketplace and the chat. Card numbers and codes are stored encrypted. We don't sell information, don't use it for advertising, and don't collect location, contacts, photos or credit card numbers. The information is stored with cloud providers, some of them outside Israel. You can view your information, ask to correct it, and delete your account.</p>
         </div>
 
-        <nav class="toc" aria-label="Contents">
+        <nav class="toc" aria-label="Contents of the policy">
           <b>Contents</b>
           <ol>
-            <li><a href="#who">Who we are</a></li>
-            <li><a href="#collect">What we collect</a></li>
-            <li><a href="#not-collect">What we don't collect</a></li>
-            <li><a href="#use">How we use information</a></li>
-            <li><a href="#share">Who we share it with</a></li>
-            <li><a href="#abroad">Storage outside Israel</a></li>
-            <li><a href="#security">Security</a></li>
-            <li><a href="#retention">How long we keep it</a></li>
+            <li><a href="#about">About this policy and the database controller</a></li>
+            <li><a href="#collect">What information we collect</a></li>
+            <li><a href="#not-collected">What we don't collect</a></li>
+            <li><a href="#mandatory">Do you have to give us the information?</a></li>
+            <li><a href="#use">How we use the information</a></li>
+            <li><a href="#other-users">What other users see</a></li>
+            <li><a href="#sharing">Who we share information with</a></li>
+            <li><a href="#abroad">Transfer of information outside Israel</a></li>
+            <li><a href="#security">Information security</a></li>
+            <li><a href="#retention">How long we keep information</a></li>
+            <li><a href="#deletion">Deleting your account</a></li>
             <li><a href="#rights">Your rights</a></li>
-            <li><a href="#delete">Deleting your account</a></li>
-            <li><a href="#minors">Minimum age</a></li>
-            <li><a href="#site">This website and cookies</a></li>
+            <li><a href="#automated">Automated decisions</a></li>
+            <li><a href="#age">Minimum age</a></li>
+            <li><a href="#notifications">Notifications and mailing</a></li>
+            <li><a href="#site">The website and storage on your device</a></li>
             <li><a href="#changes">Changes to this policy</a></li>
-            <li><a href="#contact">Contact us</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ol>
         </nav>
 
-        <h2 id="who">1. Who we are</h2>
-        <p>This policy explains how PayZo ("the app", "we") collects, uses and keeps personal information when you use the app and this website, and it forms part of our <a href="/en/terms/">Terms of Use</a>. If this English version and the Hebrew version differ, the Hebrew version prevails.</p>
+        <h2 id="about">1. About this policy and the database controller</h2>
+        <p><span class="cl-n">1.1</span> This policy explains what personal information is collected when you use the PayZo app and the arnaki.app website, why, who it's shared with, how long it's kept and what your rights are. It is written under the Privacy Protection Law, 5741-1981, and the regulations under it.</p>
+        <p><span class="cl-n">1.2</span> The controller of the database is <mark class="todo">[full name of the operator]</mark>, <mark class="todo">[company / business number]</mark>, <mark class="todo">[address]</mark>. Privacy enquiries: <a href="mailto:{{privacyEmail}}">{{privacyEmail}}</a>. <mark class="todo">[if a data protection officer is appointed: name and contact]</mark></p>
+        <p><span class="cl-n">1.3</span> This policy forms part of the Terms of Use. If this English version and the Hebrew version differ, the Hebrew version prevails.</p>
 
-        <h2 id="collect">2. What we collect</h2>
-        <h3>Information you give us</h3>
+        <h2 id="collect">2. What information we collect</h2>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Type</th><th>What exactly</th><th>Source</th></tr></thead>
+          <tbody>
+            <tr><td>Account details</td><td>Name, email address, phone number, password (stored only as a hash from which the password can't be recovered), confirmation of age 18+, the time you accepted the terms and the version accepted</td><td>You, at sign-up</td></tr>
+            <tr><td>Cards</td><td>The brand, card number, PIN or security code if you entered one, amount and balance, expiry date. For store credit: the brand, amount, credit number if you entered one, source and description</td><td>You</td></tr>
+            <tr><td>Perk cards</td><td>The type of card you chose from the list (for example the issuer or club name) and a nickname. Not a card number</td><td>You</td></tr>
+            <tr><td>Smart Pay</td><td>The business and amount you checked, the recommendation you chose, your settings, and the balance updates that follow from your choice</td><td>You and your use</td></tr>
+            <tr><td>Marketplace</td><td>The listings you published (brand, amount, asking price) and seller approval (full name and time you accepted the seller terms)</td><td>You</td></tr>
+            <tr><td>Chat</td><td>The content of messages you send and receive, the opening message sent in your name when you contact a seller, your choice to share your phone number in a conversation, reports (reason and note) and blocks</td><td>You and other users</td></tr>
+            <tr><td>Contacting us</td><td>The content of your message and the contact details you gave</td><td>You</td></tr>
+            <tr><td>Technical and usage data</td><td>Your device's notification token (only if you allowed notifications), language and country from your device settings, IP address and type of browser or device, app error logs, views of marketplace listings (listing ID and a random browsing ID, guests included), coupon use, and balance checks you ran</td><td>Your device and our servers, automatically</td></tr>
+            <tr><td>Sign-in with Google <mark class="todo">[if enabled]</mark></td><td>Name and email from your Google account. Your profile photo is not stored</td><td>Google, at your request</td></tr>
+          </tbody>
+        </table></div>
+
+        <h2 id="not-collected">3. What we don't collect</h2>
+        <p><span class="cl-n">3.1</span> We don't collect credit card or bank account numbers, location, contacts, photos, camera or microphone, and we don't use advertising identifiers. The app contains no third-party advertising or analytics tools.</p>
+        <p><span class="cl-n">3.2</span> In the current version we don't ask for an ID number or a picture of an identity document.</p>
+
+        <h2 id="mandatory">4. Do you have to give us the information?</h2>
+        <p><span class="cl-n">4.1</span> There's no legal obligation to give us information; giving it is up to you.</p>
+        <p><span class="cl-n">4.2</span> Without account details (name, email, phone and password) you can't open an account. You can browse the marketplace and coupons as a guest without giving any details. Without card details you can't save a card in the wallet or get recommendations for it. Without a full name you can't get seller approval. Without allowing notifications you won't be notified about new messages, and the rest of the service works as usual.</p>
+
+        <h2 id="use">5. How we use the information</h2>
         <ul>
-          <li><strong>Account details:</strong> name, email address, phone number and password. Passwords are stored only as a hash, which we cannot read.</li>
-          <li><strong>Gift cards, vouchers and store credit you add:</strong> the brand, card number, security code or PIN if you enter one, the amount or balance, and the expiry date.</li>
-          <li><strong>Credit and club cards for perks:</strong> only the card type (for example the issuer or club) and a nickname you choose. We do <strong>not</strong> collect credit card numbers.</li>
-          <li><strong>Marketplace activity:</strong> listings you publish (brand, amount and any details you choose to add), swap offers you send or receive, and ratings.</li>
-          <li><strong>Chat:</strong> the messages you send to other users, and any reports or blocks you make.</li>
-          <li><strong>Seller approval:</strong> your full name and acceptance of the seller terms. If we ever ask for more verification details, we'll update this policy and ask for them explicitly.</li>
-          <li><strong>Support requests:</strong> the content of messages you send us.</li>
+          <li><strong>To run the service:</strong> manage the account, store and show the cards, calculate payment recommendations, show perks and coupons, run the marketplace and chat, and send service messages.</li>
+          <li><strong>For safety and fraud prevention:</strong> approve sellers, handle reports, enforce the terms, limit misuse and secure the service.</li>
+          <li><strong>To improve the service:</strong> fix faults using error logs, and improve the quality of payment recommendations based on the choices users make, using the data in aggregate form as far as possible.</li>
+          <li><strong>To comply with the law:</strong> keep records the law requires, respond to a competent authority and defend against claims.</li>
         </ul>
-        <h3>Information collected automatically</h3>
+        <p><span class="cl-n">5.1</span> We don't sell personal information, don't share it with advertisers, and don't build profiles for advertising.</p>
+
+        <h2 id="other-users">6. What other users see</h2>
+        <p><span class="cl-n">6.1</span> Other users see the name you chose, the details of the listings you published (brand, amount and price, without the card number or code), and the messages in your conversations with them.</p>
+        <p><span class="cl-n">6.2</span> Your phone number isn't shown to other users unless you choose to share it in a particular conversation. You can stop sharing at any time, but someone who already saw the number may have kept it.</p>
+        <p><span class="cl-n">6.3</span> If you give a card's details to another user outside the service, that's your choice, and what they do with them is outside our control.</p>
+
+        <h2 id="sharing">7. Who we share information with</h2>
+        <p><span class="cl-n">7.1</span> <strong>Service providers who work for us</strong>, only to the extent they need to provide their service to us. All of them are bound to protect the information:</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Provider</th><th>Role</th><th>What it receives</th><th>Location</th></tr></thead>
+          <tbody>
+            <tr><td>MongoDB Atlas</td><td>Database</td><td>All the information in the service, with sensitive fields encrypted</td><td><mark class="todo">[region: check in the Atlas account]</mark></td></tr>
+            <tr><td>Railway</td><td>Server hosting</td><td>Information passing through the server, server logs</td><td><mark class="todo">[region: check in the Railway account]</mark></td></tr>
+            <tr><td>Resend</td><td>Sending email</td><td>Email address, name and message content (reset code)</td><td>European Union (Ireland)</td></tr>
+            <tr><td>Expo and Apple</td><td>Phone notifications and app updates</td><td>Notification token, the sender's name in the notification (without the message content), an install ID for updates</td><td>USA</td></tr>
+            <tr><td>Sentry <mark class="todo">[if enabled]</mark></td><td>Error reporting</td><td>Error and device details and an internal user ID. Names, emails, phone numbers and card numbers are removed before sending</td><td><mark class="todo">[USA or EU, depending on setup]</mark></td></tr>
+            <tr><td>Google <mark class="todo">[if sign-in with Google is enabled]</mark></td><td>Sign-in verification</td><td>Your sign-in token, for verification</td><td>USA</td></tr>
+          </tbody>
+        </table></div>
+        <p><span class="cl-n">7.2</span> <mark class="todo">[only if the balance check stays]</mark> <strong>Card issuers:</strong> when you ask for a balance check, the card's details (number, and code if required) are entered on the issuer's website, for the check only. The issuer receives them under its own policy.</p>
+        <p><span class="cl-n">7.3</span> <strong>As required by law:</strong> when we're required to by law, court order or a competent authority's demand, or when it's needed to protect the rights, property or safety of users, the public or us, including in a case of suspected fraud.</p>
+        <p><span class="cl-n">7.4</span> <strong>Structural change:</strong> in a merger, acquisition or transfer of the business, provided the receiving body undertakes to protect the information under this policy. We'll tell you about it in advance.</p>
+
+        <h2 id="abroad">8. Transfer of information outside Israel</h2>
+        <p><span class="cl-n">8.1</span> Some of our service providers store or process information outside Israel, as set out in section 7. The transfer is made under the Privacy Protection (Transfer of Data to Databases Abroad) Regulations, 5761-2001: to countries whose law ensures an adequate level of protection, such as EU member states, or on the basis of the provider's contractual undertaking to protect the information and not pass it to others.</p>
+
+        <h2 id="security">9. Information security</h2>
+        <p><span class="cl-n">9.1</span> What we actually do:</p>
         <ul>
-          <li><strong>Preferences:</strong> language and country, based on your device's region settings.</li>
-          <li><strong>Notification token:</strong> if you allow notifications, an identifier that lets us notify you (for example about a new chat message).</li>
-          <li><strong>Technical data:</strong> device type, operating system and app version, IP address and server logs, and crash reports that help us fix bugs. We filter personal and card details out of crash reports.</li>
+          <li>all communication between the app and the server is encrypted (HTTPS);</li>
+          <li>card numbers, PINs and security codes are stored encrypted with AES-256 and are not written to logs;</li>
+          <li>passwords are stored only as a one-way hash (bcrypt);</li>
+          <li>a password reset code is valid for 15 minutes, single-use and limited in attempts;</li>
+          <li>changing your password signs out all devices, and signing out ends the session on the server;</li>
+          <li>rate limits on sensitive actions, and access to information limited to staff who need it;</li>
+          <li>in the app: the sign-in token is kept in the device's secure storage, the app screen is blurred in the app switcher, and a copied card number is cleared from the clipboard after 60 seconds.</li>
         </ul>
+        <p><span class="cl-n">9.2</span> No system is completely immune. If a security incident affects your information, we'll act under the law, including reporting to the Privacy Protection Authority and notifying you where the law requires.</p>
+        <p><span class="cl-n">9.3</span> You have a part too: choose a strong password you don't use elsewhere, and tell us right away if you suspect unauthorized access.</p>
 
-        <h2 id="not-collect">3. What we don't collect</h2>
+        <h2 id="retention">10. How long we keep information</h2>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Information</th><th>Retention</th></tr></thead>
+          <tbody>
+            <tr><td>Account details, cards, settings</td><td>As long as the account is active. On account deletion: deleted or anonymized immediately, as set out in section 11</td></tr>
+            <tr><td>Chat messages</td><td>Kept with the recipient as long as the conversation exists. After an account is deleted, the sender's name is replaced with "Deleted user" <mark class="todo">[decide: delete the messages themselves after X months]</mark></td></tr>
+            <tr><td>Reports and how they were handled</td><td><mark class="todo">[period, for example 3 years]</mark>, for safety and fraud prevention</td></tr>
+            <tr><td>Seller approval and verification records</td><td>Up to 7 years, the limitation period, to defend against claims and prevent fraud</td></tr>
+            <tr><td>App error logs, listing view records</td><td>30 days</td></tr>
+            <tr><td>Balance check records</td><td>2 days</td></tr>
+            <tr><td>Backups</td><td>Up to <mark class="todo">[30]</mark> days, then deleted</td></tr>
+          </tbody>
+        </table></div>
+        <p><span class="cl-n">10.1</span> When the period ends, the information is deleted, or kept only in a form that doesn't identify you.</p>
+
+        <h2 id="deletion">11. Deleting your account</h2>
+        <p><span class="cl-n">11.1</span> You can delete your account at any time from inside the app (Profile → Delete account), or by asking at <a href="mailto:{{privacyEmail}}">{{privacyEmail}}</a>. Deletion is final and immediate.</p>
+        <p><span class="cl-n">11.2</span> <strong>Deleted immediately:</strong> your cards, store credits, perk cards, listings, phone number, seller approval and preferences. Your name and email are replaced with values that don't identify you, your password is cancelled, and your devices are signed out.</p>
+        <p><span class="cl-n">11.3</span> <strong>Kept, as set out in section 10:</strong> messages you sent (with the people who received them, under "Deleted user"), reports, records the law requires or that are needed to prevent fraud and defend against claims, and backups until they're deleted. The record that you accepted the terms is kept on the anonymized account.</p>
+        <p><span class="cl-n">11.4</span> Before deleting, save your card details outside the app, because after deletion we can't restore them.</p>
+
+        <h2 id="rights">12. Your rights</h2>
+        <p><span class="cl-n">12.1</span> Under the Privacy Protection Law, you're entitled:</p>
         <ul>
-          <li>GPS location, contacts, photos or microphone access.</li>
-          <li>Advertising identifiers, or tools that track you across other companies' apps and websites.</li>
-          <li>Payment details: no payments are made in the app in its current version.</li>
+          <li><strong>to view</strong> the information about you that we hold (section 13 of the Law);</li>
+          <li><strong>to ask us to correct or delete</strong> information that is not accurate, complete, clear or up to date (section 14 of the Law);</li>
+          <li><strong>to ask us to delete</strong> your account and information, as set out in section 11;</li>
+          <li><strong>to ask to be removed</strong> from direct mailing, if you agree to receive it in the future (section 17F of the Law);</li>
+          <li><strong>to complain</strong> to the Privacy Protection Authority at the Ministry of Justice.</li>
         </ul>
+        <p><span class="cl-n">12.2</span> To exercise a right, write to <a href="mailto:{{privacyEmail}}">{{privacyEmail}}</a> from the address registered on the account. We may ask for more details to confirm that you're the account holder. We'll reply within 30 days. If we refuse a request, we'll explain why.</p>
+        <p><span class="cl-n">12.3</span> If you ask to correct a detail that can't be changed in the app, such as your name, email or phone number, we'll correct it at your request.</p>
 
-        <h2 id="use">4. How we use information</h2>
-        <ul>
-          <li>To run the service: store and show your cards, calculate Smart Pay recommendations, show perks and coupons, and enable listings, swap offers and chat.</li>
-          <li>To keep people safe: approve sellers, prevent fraud and abuse, and handle reports.</li>
-          <li>To provide support and send service messages, such as a new-message notification or notice of a change to our terms.</li>
-          <li>To improve the service, based on technical and aggregated information.</li>
-          <li>To comply with legal obligations.</li>
-        </ul>
-        <p>We don't sell personal information, use it for targeted advertising, or share it with advertisers. We send marketing messages only if you explicitly agree, and you can always opt out.</p>
+        <h2 id="automated">13. Automated decisions</h2>
+        <p><span class="cl-n">13.1</span> Smart Pay recommendations are calculated automatically, by estimated savings, how much of the amount is covered and the number of cards. They're recommendations only; whether to act on them is your decision.</p>
+        <p><span class="cl-n">13.2</span> Chat messages pass an automatic filter for offensive words. In addition, the number of certain actions is limited automatically, such as balance checks, sign-in attempts and listings.</p>
+        <p><span class="cl-n">13.3</span> Decisions on seller approval, suspension and handling reports are made by a person.</p>
 
-        <h2 id="share">5. Who we share it with</h2>
-        <ul>
-          <li><strong>Other users:</strong> your username, the listings you publish (without the card number or code), offers exchanged between you, ratings, and chat messages with the person you're talking to. Your phone number isn't shown to other users unless you choose to share it. <strong>Once a swap is accepted</strong>, the transferred card's details, including its number and code, are available to its new owner.</li>
-          <li><strong>Service providers working for us:</strong> cloud hosting and database, notification delivery (Apple and Expo), crash reporting and email delivery. They receive only what they need to provide their service and are obliged to protect it.</li>
-          <li><strong>When required by law:</strong> if a law, court order or competent authority requires it, or to protect the rights, property or safety of our users and PayZo.</li>
-          <li><strong>Business changes:</strong> in a merger, acquisition or transfer of the business, information moves to the successor, subject to this policy.</li>
-        </ul>
+        <h2 id="age">14. Minimum age</h2>
+        <p><span class="cl-n">14.1</span> The service is for people aged 18 and over, and we don't knowingly collect information about minors. If we learn that a minor has opened an account, we'll delete it. A parent who believes their child opened an account can contact us.</p>
 
-        <h2 id="abroad">6. Storage outside Israel</h2>
-        <p>Our infrastructure providers may store and process information on servers outside Israel, for example in the United States or Europe. When that happens, we make sure the transfer complies with Israeli law and uses appropriate safeguards.</p>
+        <h2 id="notifications">15. Notifications and mailing</h2>
+        <p><span class="cl-n">15.1</span> We send service messages only: a password reset code by email, and a phone notification about a new chat message. The notification shows the sender's name only, without the message content. You can turn notifications off in your phone's settings.</p>
+        <p><span class="cl-n">15.2</span> We won't send you advertising without your explicit prior consent. If you agree in the future, you can withdraw consent at any time, through the link in the message or by contacting us.</p>
 
-        <h2 id="security">7. Security</h2>
-        <ul>
-          <li>Traffic between the app and our servers is encrypted (TLS).</li>
-          <li>Card numbers, security codes and PINs are stored encrypted on our servers.</li>
-          <li>Passwords are hashed, and your sign-in token is kept in your device's secure keychain.</li>
-          <li>Access to information on our side is limited to people who need it for their work.</li>
-        </ul>
-        <p>No system is perfectly secure. If we discover a security incident that affects you, we'll notify you and the authorities as the law requires.</p>
+        <h2 id="site">16. The website and storage on your device</h2>
+        <p><span class="cl-n">16.1</span> The arnaki.app website doesn't use cookies, analytics or advertising tools. The accessibility menu saves your choices in your own browser only. The website's hosting provider may keep basic technical records, such as IP addresses, for security.</p>
+        <p><span class="cl-n">16.2</span> The app stores on your device the sign-in token (in secure storage), language and country settings, and a favorites list. Card details are not stored on the device. When you sign out, the information stored on the device is cleared, except the language settings.</p>
 
-        <h2 id="retention">8. How long we keep it</h2>
-        <p>We keep information for as long as your account is active. After you delete your account, personal information is deleted or anonymized within 30 days. Information we must keep by law, or need to handle a complaint, fraud or dispute, is kept only for as long as that requires.</p>
+        <h2 id="changes">17. Changes to this policy</h2>
+        <p><span class="cl-n">17.1</span> If we change this policy materially, we'll give notice in the app or by email before the change takes effect. If the change widens the use of information already collected, we'll ask for your consent where the law requires it.</p>
 
-        <h2 id="rights">9. Your rights</h2>
-        <p>Under Israel's Protection of Privacy Law, 5741-1981, you may review the information we hold about you, ask us to correct inaccurate information, and ask us to delete information. Some of this you can do directly in the app (editing your details and deleting your account). For anything else, email <a href="mailto:{{privacyEmail}}">{{privacyEmail}}</a> and we'll respond within 30 days. You can turn off notifications at any time in your device settings.</p>
-
-        <h2 id="delete">10. Deleting your account</h2>
-        <p>You can delete your account at any time in the app: <strong>Profile → Delete account</strong>. This removes your account details, cards and listings and cancels open offers. More on the <a href="/en/delete-account/">Delete your account</a> page.</p>
-
-        <h2 id="minors">11. Minimum age</h2>
-        <p>The service is intended for people aged 18 and over. We don't knowingly collect information from minors, and if we learn that a minor has opened an account, we'll delete it.</p>
-
-        <h2 id="site">12. This website and cookies</h2>
-        <p>The arnaki.app website doesn't use cookies, analytics or advertising tools and doesn't load content from third-party servers. The website's hosting provider may keep basic technical logs, such as IP addresses, for security purposes.</p>
-
-        <h2 id="changes">13. Changes to this policy</h2>
-        <p>We may update this policy from time to time. The date of the latest update appears at the top of this page. We'll let you know about a material change in the app or by email before it takes effect.</p>
-
-        <h2 id="contact">14. Contact us</h2>
-        <p>Privacy questions: <a href="mailto:{{privacyEmail}}">{{privacyEmail}}</a></p>
+        <h2 id="contact">18. Contact</h2>
+        <p><span class="cl-n">18.1</span> Privacy questions, requests and complaints: <a href="mailto:{{privacyEmail}}">{{privacyEmail}}</a>, or by post to <mark class="todo">[address]</mark>.</p>
       </article>
     </div>
