@@ -71,6 +71,8 @@ p{margin:0 0 1em}
 .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:calc(100svh - 72px)}
 .hero-text{display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(32px,5vw,72px) var(--margin) clamp(48px,9vh,112px)}
 .hero h1{font-size:var(--fs-display);font-weight:900}
+/* beside the stage the title has half the width: it scales with that half so its two lines never wrap */
+@media (min-width:901px){.hero h1{font-size:clamp(28px,3.1vw,50px)}}
 .hero .lead{font-size:var(--fs-lead);color:var(--ink);max-width:31em;margin:28px 0 32px}
 .hero-stage{background:var(--stage);display:grid;grid-template-columns:minmax(0,1fr);place-items:center;padding:clamp(28px,4vw,64px) var(--margin)}
 .hero-note{margin:22px 0 0;font-size:var(--fs-small);color:var(--muted)}
