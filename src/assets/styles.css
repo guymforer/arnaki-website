@@ -17,13 +17,14 @@
   --radius:20px;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
 body{margin:0;background:var(--ground);color:var(--ink);font-family:"Assistant",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
 img,svg{display:block;max-width:100%}
 a{color:var(--brand-deep);text-underline-offset:3px}
-a:hover{color:var(--brand)}
 :focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
 h1,h2,h3{font-family:"Heebo",system-ui,sans-serif;line-height:1.12;letter-spacing:-.01em;text-wrap:balance;margin:0}
+/* tracking is size-specific: tight on large headings, neutral on small ones */
+h3{letter-spacing:0;line-height:1.25}
 p{margin:0 0 1em}
 .wrap{max-width:1140px;margin-inline:auto;padding-inline:clamp(16px,4vw,32px)}
 .narrow{max-width:780px}
@@ -41,18 +42,20 @@ p{margin:0 0 1em}
 .brand-he{font-family:"Heebo",sans-serif;font-weight:600;font-size:14px;color:var(--mute);padding-inline-start:8px;border-inline-start:1px solid var(--hair-2)}
 .nav{display:flex;align-items:center;gap:4px;list-style:none;margin:0;padding:0}
 .nav a{display:block;padding:8px 12px;border-radius:10px;color:var(--soft);text-decoration:none;font-weight:600;font-size:15.5px}
-.nav a:hover,.nav a[aria-current="page"]{background:var(--tint);color:var(--brand-deep)}
+.nav a[aria-current="page"]{background:var(--tint);color:var(--brand-deep)}
 .nav .lang{border:1px solid var(--hair-2);color:var(--ink)}
 @media (max-width:760px){.nav-hide{display:none}.brand-he{display:none}}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:14px;font-weight:700;font-size:16px;text-decoration:none;line-height:1.2;border:1px solid transparent}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:14px;font-weight:700;font-size:16px;text-decoration:none;line-height:1.2;border:1px solid transparent;transition:transform 100ms ease-out,background-color 150ms ease-out,border-color 150ms ease-out,color 150ms ease-out}
+/* feedback on the press itself, not on release */
+a.btn:active,.nav a:active,.a11y-btn:active{transform:scale(.97)}
 .btn svg{width:20px;height:20px;fill:currentColor;flex:none}
 .btn-primary{background:var(--brand-deep);color:#fff;box-shadow:0 10px 24px -12px rgba(29,78,216,.8)}
-.btn-primary:hover{background:var(--brand);color:#fff}
-.btn-soon{background:var(--ink);color:var(--surface)}
+/* before release: a quiet label, not something that looks tappable */
+.btn-soon{min-height:0;padding:10px 4px;background:transparent;color:var(--soft);font-weight:600}
+.btn-store{background:var(--ink);color:var(--surface);box-shadow:0 10px 24px -14px rgba(13,26,44,.7)}
 .btn-ghost{background:var(--surface);color:var(--ink);border-color:var(--hair-2)}
-.btn-ghost:hover{border-color:var(--brand);color:var(--brand-deep)}
 
 /* hero */
 .hero{padding-block:clamp(40px,7vw,88px) clamp(40px,6vw,72px);overflow:hidden}
@@ -158,7 +161,7 @@ section.alt{background:var(--surface);border-block:1px solid var(--hair)}
 .faq details{background:var(--surface);border:1px solid var(--hair);border-radius:16px;margin-bottom:10px;box-shadow:var(--shadow-sm)}
 .faq summary{cursor:pointer;list-style:none;padding:18px 20px;font-weight:700;font-size:17.5px;display:flex;justify-content:space-between;gap:16px;align-items:center}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";width:10px;height:10px;border-right:2.5px solid var(--mute);border-bottom:2.5px solid var(--mute);transform:rotate(45deg);flex:none;margin-top:-4px;transition:transform .2s}
+.faq summary::after{content:"";width:10px;height:10px;border-right:2.5px solid var(--mute);border-bottom:2.5px solid var(--mute);transform:rotate(45deg);flex:none;margin-top:-4px;transition:transform 150ms ease-out}
 .faq details[open] summary::after{transform:rotate(-135deg);margin-top:4px}
 .faq details>div{padding:0 20px 18px;color:var(--soft)}
 .faq details>div p:last-child{margin:0}
@@ -167,7 +170,8 @@ section.alt{background:var(--surface);border-block:1px solid var(--hair)}
 @media (max-width:760px){.band{grid-template-columns:1fr}}
 .band h2{font-size:clamp(26px,3.6vw,38px);font-weight:800;color:#fff}
 .band p{color:rgba(255,255,255,.95);margin:10px 0 0;font-size:17.5px}
-.band .btn-soon{background:#fff;color:#0D1A2C}
+.band .btn-soon{color:#fff}
+.band .btn-store{background:#fff;color:#0D1A2C}
 
 /* docs (legal, support) */
 .doc main{padding-block:clamp(32px,5vw,64px)}
@@ -215,17 +219,35 @@ mark.todo{background:#FEF08A;color:#422006;padding:1px 6px;border-radius:6px;fon
 .foot-brand p{color:var(--soft);font-size:15px;margin:12px 0 0;max-width:40em}
 .foot-links{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 20px}
 .foot-links a{color:var(--soft);text-decoration:none;font-weight:600}
-.foot-links a:hover{color:var(--brand-deep);text-decoration:underline}
 .fine{border-top:1px solid var(--hair);padding-block:18px}
 .fine p{margin:0;color:var(--mute);font-size:13.5px}
 
-@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+/* hover only where there is a real pointer: on touch screens it sticks after a tap */
+@media (hover:hover){
+  a:hover{color:var(--brand)}
+  .nav a:hover{background:var(--tint);color:var(--brand-deep)}
+  .btn-primary:hover{background:var(--brand);color:#fff}
+  .btn-ghost:hover{border-color:var(--brand);color:var(--brand-deep)}
+  .btn-store:hover{background:#1F2D44;color:var(--surface)}
+  .band .btn-store:hover{background:#EEF3FB;color:#0D1A2C}
+  .foot-links a:hover{color:var(--brand-deep);text-decoration:underline}
+  .a11y-btn:hover{background:var(--brand)}
+}
+
+/* the header's hairline appears only once content scrolls under it */
+@supports (animation-timeline:scroll()){
+  .site-header{border-bottom-color:transparent;animation:header-edge linear both;animation-timeline:scroll();animation-range:0 48px}
+  @keyframes header-edge{to{border-bottom-color:var(--hair)}}
+}
+/* less transparency asked for: a solid header */
+@media (prefers-reduced-transparency:reduce){.site-header{background:var(--ground);backdrop-filter:none;-webkit-backdrop-filter:none}}
+
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}.site-header{border-bottom-color:var(--hair)}}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 
 /* ---- accessibility menu (assets/a11y.js) ---- */
 .a11y-btn{position:fixed;bottom:18px;inset-inline-start:18px;z-index:90;width:54px;height:54px;border-radius:50%;background:var(--brand-deep);color:#fff;border:2px solid #fff;box-shadow:0 10px 24px -10px rgba(29,78,216,.8);display:grid;place-items:center;cursor:pointer;padding:0}
 .a11y-btn svg{width:32px;height:32px}
-.a11y-btn:hover{background:var(--brand)}
 .a11y-panel{position:fixed;bottom:82px;inset-inline-start:18px;z-index:91;width:min(330px,calc(100vw - 36px));max-height:calc(100vh - 100px);overflow:auto;background:#fff;color:#0D1A2C;border:1px solid var(--hair-2);border-radius:18px;box-shadow:var(--shadow);padding:14px;font-family:"Assistant",system-ui,sans-serif;font-size:15.5px;line-height:1.4}
 .a11y-panel[hidden]{display:none}
 .a11y-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px}
@@ -250,9 +272,9 @@ html[data-a11y-zoom="1"] :is(.site-header,main,.site-footer){zoom:1.15}
 html[data-a11y-zoom="2"] :is(.site-header,main,.site-footer){zoom:1.3}
 html[data-a11y-zoom="3"] :is(.site-header,main,.site-footer){zoom:1.5}
 html.a11y-contrast{--ground:#fff;--surface:#fff;--surface-2:#fff;--ink:#000;--soft:#000;--mute:#000;--hair:#000;--hair-2:#000;--brand:#0000EE;--brand-deep:#0000EE;--brand-ink:#000;--tint:#fff;--save:#005A2B;--save-tint:#fff;--warn:#5A3A00;--warn-tint:#fff;--shadow:none;--shadow-sm:none}
-html.a11y-contrast .btn-primary,html.a11y-contrast .btn-soon,html.a11y-contrast .steps li::before,html.a11y-contrast .a11y-btn{background:#000;color:#fff;box-shadow:none;border-color:#000}
+html.a11y-contrast .btn-primary,html.a11y-contrast .btn-store,html.a11y-contrast .steps li::before,html.a11y-contrast .a11y-btn{background:#000;color:#fff;box-shadow:none;border-color:#000}
 html.a11y-contrast .band{background:#000;color:#fff;box-shadow:none}
-html.a11y-contrast .band .btn-soon{background:#fff;color:#000}
+html.a11y-contrast .band .btn-store{background:#fff;color:#000}
 html.a11y-contrast .site-header{background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none}
 html.a11y-contrast .hero h1 em{color:#0000EE}
 html.a11y-contrast a{color:#0000EE;text-decoration:underline}
@@ -263,4 +285,4 @@ html.a11y-font body,html.a11y-font h1,html.a11y-font h2,html.a11y-font h3,html.a
 html.a11y-spacing body{line-height:1.9;letter-spacing:.06em;word-spacing:.16em}
 html.a11y-spacing p{margin-bottom:2em}
 html.a11y-motion *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
-html.a11y-motion .site-header{backdrop-filter:none;-webkit-backdrop-filter:none}
+html.a11y-motion .site-header{backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom-color:var(--hair)}

@@ -28,7 +28,7 @@ node build.mjs
    - ניסוח "PayZo אינה צד לעסקאות" בשוק הכרטיסים, מול חוק הגנת הצרכן.
    - האם חובה לזהות את הישות המשפטית המפעילה (שם, ח.פ., כתובת) בתנאים ובמדיניות. כרגע האתר מציג רק "PayZo".
    - סעיף "הנוסח העברי גובר".
-4. **אחרי האישור של Apple:** להכניס את קישור האפליקציה ב-`appStoreUrl`, והכפתור יהפוך ל"להורדה". מומלץ להחליף אותו בתג הרשמי "Download on the App Store" מ-Apple Marketing Resources.
+4. **אחרי Release ב-App Store Connect:** להכניס ב-`appStoreUrl` את `https://apps.apple.com/app/id6822321380`. אז "בקרוב ב-App Store" הופך לכפתור "להורדה ב-App Store", השורה בתחתית הדף והתיאור לגוגל מתעדכנים, ונוסף ה-Smart App Banner של Safari (`apple-itunes-app`). מומלץ להחליף את הכפתור בתג הרשמי "Download on the App Store" מ-Apple Marketing Resources.
 
 ## הבטחות באתר שחייבות להיות נכונות ביום העלייה
 האתר מתאר את גרסה 1 כפי שתושק. כל שורה כאן היא משימה בתוכנית:
