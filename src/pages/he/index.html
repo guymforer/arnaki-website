@@ -1,215 +1,212 @@
-    <section class="hero" aria-labelledby="hero-h">
-      <div class="hero-text">
-        <h1 id="hero-h" class="lines"><span class="line"><span data-line>כל כרטיסי המתנה שלך,</span></span><span class="line"><span data-line>מנוצלים עד השקל האחרון.</span></span></h1>
-        <div class="after">
-          <p class="lead">PayZo שומרת את היתרה והתוקף של כל תו שי, כרטיס מתנה וזיכוי. בקופה היא מחשבת איך לשלם הכי משתלם, עם ההטבות של הכרטיסים שכבר יש לך.</p>
-          <div class="cta-row">{{heroCta}}</div>
-          <p class="hero-note">חינם · לאייפון · בעברית ובאנגלית</p>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span>הארנק החכם לכרטיסי מתנה</p>
+          <h1>כל כרטיסי המתנה שלך. <em>מנוצלים עד השקל האחרון.</em></h1>
+          <p class="lead">PayZo מרכזת את כל תווי השי, כרטיסי המתנה והזיכויים שלך במקום אחד, עם היתרה והתוקף של כל אחד. בקופה היא ממליצה איך לשלם הכי משתלם, כולל ההטבות של כרטיסי האשראי והמועדון שכבר יש לך.</p>
+          <div class="cta-row">
+            {{storeCta}}
+            <a class="btn btn-ghost" href="#how">איך זה עובד</a>
+          </div>
+          <p class="cta-note">חינם · לאייפון · בעברית ובאנגלית</p>
         </div>
-      </div>
-      <div class="hero-stage" id="pay">
-        <div data-ui class="pay" role="group" aria-labelledby="pay-h">
-          <div class="pay-head">
-            <h2 class="pay-title" id="pay-h">תשלום חכם</h2>
-            <span class="pay-sub">ארנק לדוגמה · 5 כרטיסים · <span class="num">₪1,320</span></span>
+
+        <div class="stage" aria-hidden="true">
+          <div class="fan">
+            <div class="gc gc-1"><span>אופנה</span><b class="num">₪300</b></div>
+            <div class="gc gc-2"><span>סופרמרקט</span><b class="num">₪250</b></div>
+            <div class="gc gc-3"><span>מסעדות</span><b class="num">₪150</b></div>
           </div>
-          <span class="pay-label" id="store-l">חנות</span>
-          <div class="chips" role="group" aria-labelledby="store-l">
-            <button type="button" class="chip" data-cat="fashion" data-amount="480" aria-pressed="true">אופנה</button>
-            <button type="button" class="chip" data-cat="super" data-amount="380" aria-pressed="false">סופרמרקט</button>
-            <button type="button" class="chip" data-cat="restaurant" data-amount="220" aria-pressed="false">מסעדה</button>
-            <button type="button" class="chip" data-cat="electronics" data-amount="899" aria-pressed="false">אלקטרוניקה</button>
-          </div>
-          <label class="pay-label" for="pay-amount">סכום בקופה</label>
-          <div class="amount">
-            <button type="button" class="step" data-step="-20" aria-label="פחות ₪20">−</button>
-            <div class="amount-field"><span aria-hidden="true">₪</span><input id="pay-amount" type="text" inputmode="decimal" value="480" autocomplete="off"></div>
-            <button type="button" class="step" data-step="20" aria-label="עוד ₪20">+</button>
-          </div>
-          <div class="rec" aria-live="polite">
-            <span class="rec-pill">ההמלצה המובילה</span>
-            <ul>
-              <li class="disc"><span>הנחת כרטיס מועדון 10%<small>נחשב חיסכון</small></span><b>−₪48</b></li>
-              <li><span>כרטיס רב-מותגי<small>פג ב-30.11.2026</small></span><b>₪200</b></li>
-              <li><span>תו שי · אופנה<small>פג ב-31.03.2027</small></span><b>₪232</b></li>
-            </ul>
-            <div class="rec-total">
-              <div><span>משלמים מהכיס</span><b data-out="pocket">₪0</b></div>
-              <div class="save"><span>חוסכים</span><b data-out="saving">₪48</b></div>
+          <div class="phone">
+            <div class="screen">
+              <div class="s-title">הארנק שלי</div>
+              <div class="s-total"><small>זמין בכרטיסים שלך</small><b class="num">₪1,120</b><small>4 כרטיסים</small></div>
+              <div class="s-card"><span class="s-chip c-or"></span><span class="t"><b>תו שי · אופנה</b><small>בתוקף עד 03/2027</small></span><span class="s-amt num">₪400</span></div>
+              <div class="s-card"><span class="s-chip c-pu"></span><span class="t"><b>זיכוי · אלקטרוניקה</b><small>בתוקף עד 06/2027</small></span><span class="s-amt num">₪320</span></div>
+              <div class="s-card"><span class="s-chip c-gr"></span><span class="t"><b>כרטיס מתנה · סופרמרקט</b><small>בתוקף עד 12/2026</small></span><span class="s-amt num">₪250</span></div>
+              <div class="s-card"><span class="s-chip c-sk"></span><span class="t"><b>תו שי · מסעדות</b><small>בתוקף עד 01/2027</small></span><span class="s-amt num">₪150</span></div>
+              <span class="s-btn">תשלום חכם</span>
             </div>
           </div>
-          <p class="pay-foot">קודם הכרטיס שפג ראשון. כרטיס מתנה הוא הכסף שלך, ולכן רק הנחות והחזרים נספרים כחיסכון.</p>
         </div>
       </div>
     </section>
 
-    <section class="intro" aria-labelledby="intro-h">
-      <div class="intro-text">
-        <h2 id="intro-h" data-reveal>כרטיס מתנה הולך לאיבוד בשקט</h2>
-        <p class="first d1" data-reveal>תו השי מהעבודה נכנס למגירה. כרטיס המתנה מיום ההולדת נשאר בתיבת המייל. הזיכוי מהחנות מחכה בוואטסאפ.</p>
-        <p data-reveal>ואז עובר התוקף, ואף אחד לא שם לב. הכסף פשוט נעלם.</p>
-        <p data-reveal>PayZo מרכזת את כולם במקום אחד, עם היתרה והתוקף של כל כרטיס, כדי שתדעו בכל רגע כמה יש לכם ואיפה.</p>
-      </div>
-      <figure class="figure" data-reveal>
-        <img src="/assets/img/dizengoff-center-interior.jpg" width="1400" height="1050" alt="קומות החנויות במרכז דיזנגוף, מבט מלמעלה אל המעברים והקונים" loading="lazy" decoding="async">
-        <figcaption>מרכז דיזנגוף, תל אביב.</figcaption>
-      </figure>
-    </section>
-
-    <section class="board-sec" id="cards" aria-labelledby="cards-h">
-      <div class="sec-head">
-        <h2 id="cards-h" data-reveal>כל הכרטיסים שלך, במסך אחד</h2>
-        <p data-reveal class="d1">היתרה והתוקף של כל כרטיס, ומה מתקבל איפה. לחצו על כרטיס כדי לפתוח אותו.</p>
-      </div>
-      <div data-ui class="board" data-reveal>
-        <button type="button" class="row" aria-expanded="false"><span class="nm">כרטיס רב-מותגי</span><span class="f">יתרה <b class="num">₪200</b></span><span class="f">עד <b class="num">30.11.2026</b></span><span class="st soon">פג החודש</span><span class="detail">מתקבל ברשתות אופנה, במסעדות ובאלקטרוניקה. מספר <span class="num">•••• 7710</span>, הקוד מוסתר עד שצריך אותו.</span></button>
-        <button type="button" class="row" aria-expanded="false"><span class="nm">כרטיס מתנה · סופרמרקט</span><span class="f">יתרה <b class="num">₪250</b></span><span class="f">עד <b class="num">31.12.2026</b></span><span class="st ok">בתוקף</span><span class="detail">מתקבל ברשת הסופרמרקטים שהנפיקה אותו. מספר <span class="num">•••• 3302</span>.</span></button>
-        <button type="button" class="row" aria-expanded="false"><span class="nm">תו שי · מסעדות</span><span class="f">יתרה <b class="num">₪150</b></span><span class="f">עד <b class="num">31.01.2027</b></span><span class="st ok">בתוקף</span><span class="detail">תו שי לחג מהעבודה. מתקבל במסעדות שברשימה של המנפיק. מספר <span class="num">•••• 9046</span>.</span></button>
-        <button type="button" class="row" aria-expanded="true"><span class="nm">תו שי · אופנה</span><span class="f">יתרה <b class="num">₪400</b></span><span class="f">עד <b class="num">31.03.2027</b></span><span class="st ok">בתוקף</span><span class="detail">מתקבל ברשתות האופנה של המנפיק. מספר <span class="num">•••• 4821</span>, הקוד מוסתר ונחשף רק כשצריך. במותגים נתמכים בודקים יתרה בלחיצה.</span></button>
-        <button type="button" class="row" aria-expanded="false"><span class="nm">זיכוי · אלקטרוניקה</span><span class="f">יתרה <b class="num">₪320</b></span><span class="f">עד <b class="num">30.06.2027</b></span><span class="st ok">בתוקף</span><span class="detail">זיכוי מהחזרת מוצר. מתקבל רק בחנות שנתנה אותו. מספר <span class="num">•••• 5517</span>.</span></button>
-        <button type="button" class="row" aria-expanded="false"><span class="nm">כרטיס מתנה · ספרים</span><span class="f">יתרה <b class="num">₪100</b></span><span class="f">עד <b class="num">31.08.2027</b></span><span class="st ok">בתוקף</span><span class="detail">מתקבל ברשת חנויות הספרים. מספר <span class="num">•••• 2268</span>.</span></button>
-        <button type="button" class="row" aria-expanded="false"><span class="nm">תו שי · פנאי</span><span class="f">יתרה <b class="num">₪0</b></span><span class="f">עד <b class="num">31.12.2026</b></span><span class="st used">נוצל</span><span class="detail">נוצל עד הסוף. נשאר ברשימה כדי שתדעו שכבר השתמשתם בו.</span></button>
-      </div>
-    </section>
-
-    <section class="prefs-sec" aria-labelledby="prefs-h">
-      <div class="sec-head">
-        <h2 id="prefs-h" data-reveal>תשלום חכם, לפי הכללים שלך</h2>
-        <p data-reveal class="d1">הפעילו וכבו כאן, וההמלצה בראש העמוד מתעדכנת.</p>
-      </div>
-      <div class="band f-sky on">
-        <div><p class="sent" id="pr-club">לכלול את ההטבות של כרטיס המועדון</p><p class="cons">על קנייה של <span class="num">₪480</span> באופנה: הנחה של 10%, כלומר <span class="num">₪48</span> פחות לשלם.</p></div>
-        <button type="button" data-ui class="switch" role="switch" aria-checked="true" aria-labelledby="pr-club" data-pref="club"></button>
-      </div>
-      <div class="band f-green on">
-        <div><p class="sent" id="pr-multi">לשלב כרטיסים רב-מותגיים</p><p class="cons"><span class="num">₪200</span> נוספים לאופנה, למסעדות ולאלקטרוניקה. הם נכנסים ראשונים, כי הכרטיס פג ב-30.11.</p></div>
-        <button type="button" data-ui class="switch" role="switch" aria-checked="true" aria-labelledby="pr-multi" data-pref="multi"></button>
-      </div>
-      <div class="band f-amber">
-        <div><p class="sent" id="pr-back">להוסיף החזר מכרטיס האשראי</p><p class="cons">בסופרמרקט, על <span class="num">₪130</span> שמשלמים מהכיס: 5% חוזרים לחשבון, <span class="num">₪6.50</span>.</p></div>
-        <button type="button" data-ui class="switch" role="switch" aria-checked="false" aria-labelledby="pr-back" data-pref="cashback"></button>
-      </div>
-    </section>
-
-    <figure class="rest">
-      <img src="/assets/img/carmel-market.jpg" width="2400" height="1600" alt="דוכני ירקות ופירות בשוק הכרמל, קונים עוברים בין הדוכנים" loading="lazy" decoding="async">
-      <figcaption>שוק הכרמל, תל אביב.</figcaption>
-    </figure>
-
-    <section class="agenda-sec" id="benefits" aria-labelledby="ben-h">
-      <div class="agenda-head">
-        <h2 id="ben-h" data-reveal><span class="soft">איזו הטבה מגיעה לך?</span> לפי הכרטיסים שבארנק.</h2>
-        <a class="btn btn-primary" href="#pay" data-reveal>לנסות את התשלום החכם</a>
-      </div>
-      <div class="agenda">
-        <div class="tabs" role="tablist" aria-label="קטגוריות" data-reveal>
-          <button type="button" class="tab" role="tab" id="tab-f" aria-controls="p-f" aria-selected="true"><b>אופנה</b><span>3 הטבות</span></button>
-          <button type="button" class="tab" role="tab" id="tab-s" aria-controls="p-s" aria-selected="false" tabindex="-1"><b>סופרמרקט</b><span>3 הטבות</span></button>
-          <button type="button" class="tab" role="tab" id="tab-r" aria-controls="p-r" aria-selected="false" tabindex="-1"><b>מסעדות</b><span>2 הטבות</span></button>
-          <button type="button" class="tab" role="tab" id="tab-e" aria-controls="p-e" aria-selected="false" tabindex="-1"><b>אלקטרוניקה</b><span>2 הטבות</span></button>
+    <section class="block alt" id="who" aria-labelledby="who-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">למי זה מתאים</p>
+          <h2 id="who-h">למי שיש כרטיסים, ולא רוצה לאבד מהם אף שקל</h2>
+          <p>כרטיס מתנה הולך לאיבוד כשהוא נשכח במגירה, בתיבת המייל או בוואטסאפ. PayZo שומרת את כולם מול העיניים.</p>
         </div>
-        <div class="bands d1" data-ui data-reveal>
-          <div class="bnd-panel" id="p-f" role="tabpanel" aria-labelledby="tab-f">
-            <div class="bnd"><span class="fig">10%</span><span class="ttl">כרטיס מועדון אופנה<small>על כל הקנייה, בהצגת הכרטיס בקופה</small></span><span class="src"><b>נבדק 28.10.2026</b>מקור: אתר המועדון</span></div>
-            <div class="bnd"><span class="fig">₪50</span><span class="ttl">קופון<small>בקנייה מעל <span class="num">₪300</span>, עד 31.12.2026</small></span><span class="src"><b>נבדק 27.10.2026</b>מקור: אתר הרשת</span></div>
-            <div class="bnd"><span class="fig">3%</span><span class="ttl">כרטיס אשראי<small>החזר על קניות ברשתות אופנה</small></span><span class="src"><b>נבדק 26.10.2026</b>מקור: אתר חברת האשראי</span></div>
-          </div>
-          <div class="bnd-panel" id="p-s" role="tabpanel" aria-labelledby="tab-s" hidden>
-            <div class="bnd"><span class="fig">5%</span><span class="ttl">כרטיס אשראי<small>החזר בסופרמרקטים, עד <span class="num">₪100</span> בחודש</small></span><span class="src"><b>נבדק 28.10.2026</b>מקור: אתר חברת האשראי</span></div>
-            <div class="bnd"><span class="fig">₪15</span><span class="ttl">קופון<small>בקנייה מעל <span class="num">₪150</span></small></span><span class="src"><b>נבדק 25.10.2026</b>מקור: אתר הרשת</span></div>
-            <div class="bnd"><span class="fig">7%</span><span class="ttl">כרטיס מועדון<small>על מוצרי המותג של הרשת</small></span><span class="src"><b>נבדק 24.10.2026</b>מקור: אתר המועדון</span></div>
-          </div>
-          <div class="bnd-panel" id="p-r" role="tabpanel" aria-labelledby="tab-r" hidden>
-            <div class="bnd"><span class="fig">1+1</span><span class="ttl">כרטיס מועדון<small>על קפה ומאפה, בימים א׳ עד ה׳</small></span><span class="src"><b>נבדק 28.10.2026</b>מקור: אתר המועדון</span></div>
-            <div class="bnd"><span class="fig">10%</span><span class="ttl">כרטיס אשראי<small>בהזמנה מעל <span class="num">₪120</span></small></span><span class="src"><b>נבדק 26.10.2026</b>מקור: אתר חברת האשראי</span></div>
-          </div>
-          <div class="bnd-panel" id="p-e" role="tabpanel" aria-labelledby="tab-e" hidden>
-            <div class="bnd"><span class="fig">8%</span><span class="ttl">כרטיס מועדון<small>על אביזרים, בהצגת הכרטיס</small></span><span class="src"><b>נבדק 27.10.2026</b>מקור: אתר המועדון</span></div>
-            <div class="bnd"><span class="fig">₪100</span><span class="ttl">קופון<small>בקנייה מעל <span class="num">₪1,000</span></small></span><span class="src"><b>נבדק 25.10.2026</b>מקור: אתר הרשת</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="how-sec" id="how" aria-labelledby="how-h">
-      <h2 id="how-h" data-reveal>איך זה עובד</h2>
-      <div class="how-body">
-        <ol class="how-steps">
-          <li class="active"><h3>קודם, מוסיפים את הכרטיסים.</h3><p>כרטיסי מתנה, תווי שי וזיכויים, וגם את סוג כרטיסי האשראי והמועדון שלכם, בלי מספרים.</p></li>
-          <li><h3>בקופה, פותחים תשלום חכם.</h3><p>בוחרים חנות ומזינים סכום, ומקבלים את הדרך המשתלמת ביותר לשלם.</p></li>
-          <li><h3>ומה שלא צריך, מפרסמים בשוק.</h3><p>מי שמעוניין בכרטיס פונה אליכם בצ׳אט, ואתם מסכמים ביניכם. PayZo אינה צד לעסקה, ובאפליקציה לא מתבצעים תשלומים או העברות של כרטיסים.</p></li>
-        </ol>
-      <div class="how-stage">
-        <div data-ui class="phone" aria-hidden="true">
-          <div class="state on">
-            <p class="ph-title">הוספת כרטיס מתנה</p>
-            <div class="fld"><span>מותג</span>תו שי · אופנה</div>
-            <div class="fld"><span>סכום</span><b class="num">₪400</b></div>
-            <div class="fld"><span>תוקף</span><b class="num">31.03.2027</b></div>
-            <div class="fld"><span>מספר כרטיס</span><b class="num">•••• 4821</b></div>
-            <div class="fld"><span>קוד</span><b>נשמר מוצפן</b></div>
-            <span class="ph-btn">שמירה בארנק</span>
-          </div>
-          <div class="state">
-            <p class="ph-title">תשלום חכם</p>
-            <div class="fld"><span>חנות</span>אופנה</div>
-            <div class="fld"><span>סכום</span><b class="num">₪480</b></div>
-            <div class="fld"><span>הנחת מועדון 10%</span><b class="num">−₪48</b></div>
-            <div class="fld"><span>כרטיס רב-מותגי</span><b class="num">₪200</b></div>
-            <div class="fld"><span>תו שי · אופנה</span><b class="num">₪232</b></div>
-            <span class="ph-btn">משלמים מהכיס ₪0 · חוסכים ₪48</span>
-          </div>
-          <div class="state">
-            <p class="ph-title">שוק</p>
-            <div class="tile"><span class="sw"></span><span><b class="num">₪150 · מסעדות</b><small>תוקף 31.01.2027 · מבקשים ₪135</small></span></div>
-            <div class="bub">היי, הכרטיס עדיין זמין?</div>
-            <div class="bub me">כן, אפשר לסכם היום.</div>
-            <span class="ph-btn">צ׳אט עם המוכר</span>
-            <p class="ph-note">התשלום והמסירה נעשים ביניכם, מחוץ לאפליקציה.</p>
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>
-
-    <section class="letter-sec" aria-labelledby="letter-h">
-      <div>
-        <h2 id="letter-h" data-reveal>הכרטיסים שלכם נשארים שלכם</h2>
-        <p class="aside d1" data-reveal>מה קורה עם המספרים שאתם שומרים ב-PayZo, בקצרה.</p>
-      </div>
-      <div class="letter" data-reveal>
-        <div class="who"><img src="/assets/img/penguin.png" width="48" height="48" alt="">PayZo · פייזו</div>
-        <p>כשנותנים לאפליקציה את מספרי הכרטיסים, מגיע לדעת מה קורה איתם. אז הנה, בלי אותיות קטנות.</p>
-        <p><mark>מספרי הכרטיסים והקודים נשמרים מוצפנים</mark>, ומוצגים רק לבעל הכרטיס. בהטבות בוחרים רק את סוג כרטיס האשראי, בלי המספר שלו.</p>
-        <p>אין פרסומות ואין כלי מעקב, ואנחנו לא מוכרים מידע. כל מוכר בשוק עובר אישור לפני שהוא יכול לפרסם כרטיס.</p>
-        <p>ואם תרצו ללכת: מוחקים את החשבון מתוך האפליקציה, בכל רגע. אפשר גם לדווח על משתמש ולחסום אותו.</p>
-        <p class="sign">גיא משה פורר</p>
-        <p class="role">מייסד PayZo</p>
-      </div>
-    </section>
-
-    <section class="faq-sec" id="faq" aria-labelledby="faq-h">
-      <div>
-        <h2 id="faq-h" data-reveal>שאלות נפוצות</h2>
-        <ul class="qlist d1" data-reveal>
-          <li><button type="button" class="q" aria-expanded="false">כמה זה עולה?</button><div class="ans"><p>PayZo חינמית להורדה ולשימוש.</p></div></li>
-          <li><button type="button" class="q" aria-expanded="false">אפשר לקנות כרטיסים באפליקציה?</button><div class="ans"><p>בשלב הזה לא. באפליקציה לא מתבצעים תשלומים. שומרים ומנהלים כרטיסים, מקבלים המלצות בתשלום חכם, מפרסמים כרטיסים בשוק ומדברים עם משתמשים בצ׳אט.</p></div></li>
-          <li><button type="button" class="q" aria-expanded="false">האם פרטי הכרטיסים שלי בטוחים?</button><div class="ans"><p>מספרי הכרטיסים וקודי האבטחה נשמרים מוצפנים ומוצגים רק לבעל הכרטיס. אנחנו לא שומרים מספרים של כרטיסי אשראי: בהטבות בוחרים רק את סוג הכרטיס.</p></div></li>
-          <li><button type="button" class="q" aria-expanded="false">איך עובד השוק?</button><div class="ans"><p>מפרסמים כרטיס שלא צריך, ומי שמעוניין פונה בצ׳אט. האפליקציה לא מעבירה כרטיסים או כסף בין משתמשים, ו-PayZo אינה צד לעסקאות: מה שמסכמים נעשה מחוץ לאפליקציה ובאחריותכם.</p></div></li>
-          <li><button type="button" class="q" aria-expanded="false">אילו כרטיסים אפשר להוסיף?</button><div class="ans"><p>כרטיסי מתנה, תווי שי וזיכויים של רשתות בישראל: אופנה, מזון, אלקטרוניקה, פנאי ועוד. רשימת המותגים מתעדכנת כל הזמן.</p></div></li>
-          <li><button type="button" class="q" aria-expanded="false">יש גרסה לאנדרואיד?</button><div class="ans"><p>בשלב הראשון PayZo זמינה לאייפון.</p></div></li>
-          <li><button type="button" class="q" aria-expanded="false">איך מוחקים חשבון?</button><div class="ans"><p>בתוך האפליקציה: פרופיל ← מחיקת חשבון. כל הפרטים בעמוד <a href="/delete-account/">מחיקת חשבון</a>.</p></div></li>
-          <li><button type="button" class="q" aria-expanded="false">מי עומד מאחורי PayZo?</button><div class="ans"><p>PayZo פותחה ומופעלת בישראל. אפשר לכתוב לנו ל-<a href="mailto:{{supportEmail}}">{{supportEmail}}</a>.</p></div></li>
+        <ul class="who">
+          <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M3 12h18M12 8v13M12 8c-1.5-3-5-3.5-5-1s3.5 1 5 1zm0 0c1.5-3 5-3.5 5-1s-3.5 1-5 1z"/></svg></span><h3>קיבלתם תו שי לחג</h3><p>מהעבודה, מהמשפחה או מחברים. שומרים אותו באפליקציה ויודעים תמיד כמה נשאר ועד מתי.</p></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="16" height="11" rx="2"/><path d="M6 3h14a2 2 0 0 1 2 2v9M2 10h16"/></svg></span><h3>יש לכם כמה כרטיסי אשראי ומועדון</h3><p>PayZo מראה איזה כרטיס נותן את ההטבה הכי טובה בכל רשת.</p></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg></span><h3>קיבלתם כרטיס שלא מתאים לכם</h3><p>מפרסמים אותו בשוק ומוצאים מישהו שבאמת רוצה אותו.</p></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.2 5.3L20 9l-4.3 3.9L17 19l-5-3-5 3 1.3-6.1L4 9l5.8-.7z"/></svg></span><h3>אוהבים לחסוך בלי להתאמץ</h3><p>בלי טבלאות ובלי חישובים. בוחרים חנות וסכום ומקבלים המלצה.</p></li>
         </ul>
       </div>
-      <div class="pane" aria-hidden="true"><p class="pane-q"></p><div class="pane-a"></div></div>
     </section>
 
-    <section class="cta-photo" aria-labelledby="cta-h">
-      <img src="/assets/img/shekel-coin.jpg" width="2400" height="1800" alt="מטבע של 10 שקלים עומד על שולחן עץ" loading="lazy" decoding="async">
-      <div class="cta-text">
-        <h2 id="cta-h" data-reveal>עד השקל האחרון.</h2>
-        <p data-reveal class="d1">{{storeLine}} מוסיפים את הכרטיסים פעם אחת, ובקופה יודעים איך לשלם.</p>
-        <div class="cta-row d2" data-reveal>{{closeCta}}</div>
+    <section class="block" id="features" aria-labelledby="features-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">מה PayZo עושה</p>
+          <h2 id="features-h">ארבעה כלים, מטרה אחת: לשלם פחות</h2>
+        </div>
+
+        <div class="feature">
+          <div class="f-text">
+            <h3>ארנק אחד לכל הכרטיסים</h3>
+            <p>מוסיפים כל כרטיס מתנה, תו שי או זיכוי, עם המספר, הסכום והתוקף, ורואים את כולם במסך אחד.</p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>יתרה ותוקף לכל כרטיס</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>קוד הכרטיס מוסתר, ונחשף רק כשצריך</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>במותגים נתמכים: בדיקת יתרה בלחיצה</li>
+            </ul>
+          </div>
+          <div class="f-media" aria-hidden="true">
+            <div class="phone sm"><div class="screen">
+              <div class="s-title">תו שי · אופנה</div>
+              <div class="s-total"><small>יתרה</small><b class="num">₪400</b><small>בתוקף עד 03/2027</small></div>
+              <div class="s-field"><span>מספר כרטיס</span><b class="num">•••• 4821</b></div>
+              <div class="s-field"><span>קוד</span><b>••••</b></div>
+              <span class="s-btn">הצג קוד</span>
+              <span class="s-btn">בדיקת יתרה</span>
+            </div></div>
+          </div>
+        </div>
+
+        <div class="feature flip">
+          <div class="f-text">
+            <h3>תשלום חכם</h3>
+            <p>בוחרים חנות ומזינים סכום. PayZo בודקת את כל מה שיש לכם, כרטיסי מתנה, זיכויים, הטבות של כרטיסי אשראי ומועדון, קופונים והנחות, ומדרגת את הדרכים לשלם.</p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>משלבת כמה כרטיסים בתשלום אחד</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>מראה כמה חוסכים ומה משלמים בקופה</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>הדרך המשתלמת ביותר מופיעה ראשונה</li>
+            </ul>
+          </div>
+          <div class="f-media" aria-hidden="true">
+            <div class="phone sm"><div class="screen">
+              <div class="s-title">תשלום חכם</div>
+              <div class="s-field"><span>חנות</span><b>אופנה</b></div>
+              <div class="s-field"><span>סכום</span><b class="num">₪432</b></div>
+              <div class="s-rec">
+                <span class="s-pill p-green">ההמלצה המובילה</span>
+                <div class="pills"><span class="s-pill p-sky">הטבת מועדון 10%</span><span class="s-pill p-sky">תו שי ₪200</span></div>
+                <div>משלמים בקופה <b class="num">₪188.80</b></div>
+                <div class="save num">חוסכים ₪43.20</div>
+              </div>
+              <span class="s-btn">לפרטי התשלום</span>
+            </div></div>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="f-text">
+            <h3>הטבות וקופונים</h3>
+            <p>מוסיפים את כרטיסי האשראי והמועדון שלכם, רק את סוג הכרטיס ובלי מספרים, ורואים איזו הטבה מגיעה לכם בכל רשת. ובנוסף: קופונים פעילים.</p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>ההטבות של כל הכרטיסים במקום אחד</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>קופונים לפי קטגוריה</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>נכנסות אוטומטית לחישוב של התשלום החכם</li>
+            </ul>
+          </div>
+          <div class="f-media" aria-hidden="true">
+            <div class="phone sm"><div class="screen">
+              <div class="s-title">ההטבות שלי</div>
+              <div class="s-card"><span class="s-chip c-sk"></span><span class="t"><b>כרטיס מועדון</b><small>10% הנחה ברשתות אופנה</small></span></div>
+              <div class="s-card"><span class="s-chip c-gr"></span><span class="t"><b>כרטיס אשראי</b><small>5% החזר בסופרמרקטים</small></span></div>
+              <div class="s-card"><span class="s-chip c-pu"></span><span class="t"><b>קופון</b><small>₪15 הנחה בקנייה מעל ₪100</small></span></div>
+              <div class="s-card"><span class="s-chip c-or"></span><span class="t"><b>כרטיס מועדון</b><small>1+1 על קפה</small></span></div>
+            </div></div>
+          </div>
+        </div>
+
+        <div class="feature flip">
+          <div class="f-text">
+            <h3>שוק כרטיסים</h3>
+            <p>כרטיס שלא מתאים לכם שווה יותר בידיים של מישהו אחר. מפרסמים אותו בשוק, מי שמעוניין בו פונה אליכם בצ׳אט, ואתם מסכמים ביניכם.</p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>מודעה עם המותג, הסכום והתוקף</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>צ׳אט מובנה עם דיווח וחסימה</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>מוכרים עוברים אישור לפני שהם מפרסמים</li>
+            </ul>
+            <p class="note">בגרסה הנוכחית לא מתבצעים דרך האפליקציה תשלומים או העברות של כרטיסים. PayZo אינה צד לעסקאות בין משתמשים: מי שבוחר לשלם למשתמש אחר או למסור לו כרטיס עושה זאת מחוץ לאפליקציה ובאחריותו.</p>
+          </div>
+          <div class="f-media" aria-hidden="true">
+            <div class="phone sm"><div class="screen">
+              <div class="s-title">שוק</div>
+              <div class="s-list">
+                <div class="s-tile"><div class="hero-c c-or"></div><div class="b"><b class="num">₪300 · אופנה</b><small>תוקף: 03/2027</small></div></div>
+                <div class="s-tile"><div class="hero-c c-gr"></div><div class="b"><b class="num">₪200 · סופרמרקט</b><small>תוקף: 12/2026</small></div></div>
+              </div>
+              <div class="s-bubble">כן, כרטיס האופנה עדיין זמין</div>
+              <div class="s-bubble me">מעולה, תודה!</div>
+              <span class="s-btn">צ׳אט עם המוכר</span>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block alt" id="how" aria-labelledby="how-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">איך זה עובד</p>
+          <h2 id="how-h">שלושה צעדים, ואתם מסודרים</h2>
+        </div>
+        <ol class="steps">
+          <li><h3>מוסיפים את הכרטיסים</h3><p>כרטיסי מתנה, תווי שי וזיכויים, וגם את כרטיסי האשראי והמועדון שלכם.</p></li>
+          <li><h3>בקופה פותחים תשלום חכם</h3><p>בוחרים חנות וסכום ומקבלים את הדרך המשתלמת ביותר לשלם.</p></li>
+          <li><h3>מה שלא צריך, מפרסמים</h3><p>כרטיס שלא מתאים לכם עולה לשוק, ומי שמעוניין בו פונה אליכם בצ׳אט.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="block" id="trust" aria-labelledby="trust-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">פרטיות ואבטחה</p>
+          <h2 id="trust-h">הכרטיסים שלכם נשארים שלכם</h2>
+        </div>
+        <div class="trust">
+          <div><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div><h3>מוצפן</h3><p>מספרי הכרטיסים והקודים נשמרים מוצפנים, ומוצגים רק לבעל הכרטיס.</p></div></div>
+          <div><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></span><div><h3>בלי פרסומות ובלי מכירת מידע</h3><p>אנחנו לא מוכרים מידע ולא משתמשים בו לפרסום. אין באפליקציה כלי מעקב.</p></div></div>
+          <div><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span><div><h3>מוכרים מאושרים</h3><p>כל מוכר עובר אישור לפני שהוא יכול לפרסם כרטיס בשוק.</p></div></div>
+          <div><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></span><div><h3>שליטה מלאה</h3><p>אפשר לדווח על משתמש, לחסום אותו, ולמחוק את החשבון מתוך האפליקציה בכל רגע.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block alt" id="faq" aria-labelledby="faq-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">שאלות נפוצות</p>
+          <h2 id="faq-h">מה חשוב לדעת</h2>
+        </div>
+        <div class="faq">
+          <details><summary>כמה זה עולה?</summary><div><p>PayZo חינמית להורדה ולשימוש.</p></div></details>
+          <details><summary>אפשר לקנות כרטיסים באפליקציה?</summary><div><p>בשלב הזה לא. באפליקציה לא מתבצעים תשלומים. אפשר לשמור ולנהל כרטיסים, לקבל המלצות בתשלום חכם, לפרסם כרטיסים בשוק ולדבר עם משתמשים אחרים בצ׳אט.</p></div></details>
+          <details><summary>האם פרטי הכרטיסים שלי בטוחים?</summary><div><p>מספרי הכרטיסים וקודי האבטחה נשמרים מוצפנים ומוצגים רק לבעל הכרטיס. אנחנו לא שומרים מספרים של כרטיסי אשראי: בהטבות אתם בוחרים רק את סוג הכרטיס.</p></div></details>
+          <details><summary>איך עובד השוק?</summary><div><p>מפרסמים בשוק כרטיס שאתם לא צריכים, ומי שמעוניין בו פונה אליכם בצ׳אט. את הפרטים מסכמים ביניכם. האפליקציה לא מעבירה כרטיסים או כסף בין משתמשים, ו-PayZo אינה צד לעסקאות ביניכם: מה שאתם מסכמים נעשה מחוץ לאפליקציה ובאחריותכם.</p></div></details>
+          <details><summary>אילו כרטיסים ומותגים אפשר להוסיף?</summary><div><p>כרטיסי מתנה, תווי שי וזיכויים של רשתות בישראל, בתחומים כמו אופנה, מזון, אלקטרוניקה ופנאי. רשימת המותגים מתעדכנת כל הזמן.</p></div></details>
+          <details><summary>יש גרסה לאנדרואיד?</summary><div><p>בשלב הראשון PayZo זמינה לאייפון.</p></div></details>
+          <details><summary>איך מוחקים חשבון?</summary><div><p>בתוך האפליקציה: פרופיל ← מחיקת חשבון. כל הפרטים בעמוד <a href="/delete-account/">מחיקת חשבון</a>.</p></div></details>
+          <details><summary>מי עומד מאחורי PayZo?</summary><div><p>PayZo פותחה ומופעלת בישראל. אפשר לפנות אלינו בכתובת <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap">
+        <div class="band">
+          <div>
+            <h2>תנו לכרטיסים שלכם לעבוד בשבילכם</h2>
+            <p>PayZo מגיעה ל-App Store ב-{{launchDateHe}}.</p>
+          </div>
+          {{storeCta}}
+        </div>
       </div>
     </section>
