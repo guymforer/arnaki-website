@@ -14,8 +14,8 @@ const year = new Date().getFullYear();
 // ---- pages -----------------------------------------------------------------
 const PAGES = [
   { file: 'index', slug: '', nav: 'home',
-    he: { title: 'PayZo · פייזו — הארנק החכם לכרטיסי מתנה', desc: `כל תווי השי וכרטיסי המתנה במקום אחד, המלצה איך לשלם הכי משתלם, ושוק כרטיסים עם צ׳אט בין משתמשים. ${cfg.appStoreUrl ? 'בחינם ב-App Store.' : 'בקרוב ב-App Store.'}` },
-    en: { title: 'PayZo — the smart wallet for gift cards', desc: `All your gift cards in one place, a recommendation for the best way to pay, and a community marketplace to list cards and chat. ${cfg.appStoreUrl ? 'Free on the App Store.' : 'Coming soon to the App Store.'}` } },
+    he: { title: 'PayZo · פייזו — הארנק החכם לכרטיסי מתנה', desc: 'כל תווי השי וכרטיסי המתנה במקום אחד, המלצה איך לשלם הכי משתלם, ושוק כרטיסים עם צ׳אט בין משתמשים. בקרוב ב-App Store.' },
+    en: { title: 'PayZo — the smart wallet for gift cards', desc: 'All your gift cards in one place, a recommendation for the best way to pay, and a community marketplace to list cards and chat. Coming soon to the App Store.' } },
   { file: 'privacy', slug: 'privacy', legal: true,
     he: { title: 'מדיניות פרטיות · PayZo', desc: 'איזה מידע PayZo אוספת, למה, עם מי הוא משותף ואילו זכויות יש לכם.' },
     en: { title: 'Privacy Policy · PayZo', desc: 'What information PayZo collects, why, who it is shared with, and your rights.' } },
@@ -41,25 +41,12 @@ const LABELS = {
 };
 const warnings = new Set();
 
-const APPLE_LOGO = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9s-2-.9-3.3-.9c-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.8-4.2zM14 5.4c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.5-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.4z"/></svg>';
-
 function tokens(lang) {
   const he = lang === 'he';
-  // Before release: a quiet "coming soon" label (not a button). After: a real link to the store.
   const storeCta = cfg.appStoreUrl
-    ? `<a class="btn btn-store" href="${cfg.appStoreUrl}">${APPLE_LOGO}${he ? 'להורדה ב-App Store' : 'Download on the App Store'}</a>`
-    : `<span class="btn btn-soon">${APPLE_LOGO}${he ? 'בקרוב ב-App Store' : 'Coming soon to the App Store'}</span>`;
-  const storeLine = cfg.appStoreUrl
-    ? (he ? 'PayZo זמינה עכשיו ב-App Store, בחינם.' : 'PayZo is on the App Store now, free.')
-    : (he ? 'PayZo מגיעה בקרוב ל-App Store.' : 'PayZo is coming soon to the App Store.');
-  const soon = `<span class="btn btn-soon">${APPLE_LOGO}${he ? 'בקרוב ב-App Store' : 'Coming soon to the App Store'}</span>`;
-  const heroCta = cfg.appStoreUrl
-    ? storeCta
-    : `<a class="btn btn-primary" href="#how">${he ? 'איך זה עובד' : 'See how it works'}</a>${soon}`;
-  const closeCta = cfg.appStoreUrl
-    ? `<a class="btn btn-paper" href="${cfg.appStoreUrl}">${APPLE_LOGO}${he ? 'להורדה ב-App Store' : 'Download on the App Store'}</a>`
-    : `<a class="btn btn-paper" href="#pay">${he ? 'לנסות את התשלום החכם' : 'Try Smart Pay'}</a>${soon}`;
-  return { ...cfg, year, storeCta, storeLine, heroCta, closeCta, lang };
+    ? `<a class="btn btn-primary" href="${cfg.appStoreUrl}">${he ? 'להורדה ב-App Store' : 'Download on the App Store'}</a>`
+    : `<span class="btn btn-soon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9s-2-.9-3.3-.9c-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.8-4.2zM14 5.4c.7-.9 1.2-2 1-3.2-1 0-2.3.7-3 1.5-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3.1-1.4z"/></svg>${he ? `בקרוב ב-App Store · ${cfg.launchDateHe}` : `Coming to the App Store · ${cfg.launchDateEn}`}</span>`;
+  return { ...cfg, year, storeCta, lang };
 }
 
 function fill(html, lang) {
@@ -84,10 +71,6 @@ const pathFor = (lang, slug) => (lang === 'en' ? '/en/' : '/') + (slug ? slug + 
 const CSP = "default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'";
 const CSP_META = CSP;
 const CSP_HEADER = CSP + "; frame-ancestors 'none'";
-
-// iOS Safari's Smart App Banner ("Open" / "Get"), only once the store link is set.
-const APP_ID = (String(cfg.appStoreUrl || '').match(/\/id(\d+)/) || [])[1];
-const APP_BANNER = APP_ID ? `\n  <meta name="apple-itunes-app" content="app-id=${APP_ID}">` : '';
 
 function layout(lang, page, body) {
   const he = lang === 'he';
@@ -118,7 +101,7 @@ function layout(lang, page, body) {
   <meta http-equiv="Content-Security-Policy" content="${CSP_META}">
   <title>${m.title}</title>
   <meta name="description" content="${m.desc}">
-  <meta name="theme-color" content="#F3F7FD">${APP_BANNER}
+  <meta name="theme-color" content="#1D4ED8">
   <meta name="color-scheme" content="light">
   <link rel="canonical" href="${DOMAIN}${here}">
   <link rel="alternate" hreflang="he" href="${DOMAIN}${pathFor('he', page.slug)}">
@@ -133,24 +116,23 @@ function layout(lang, page, body) {
   <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/fonts/heebo-${he ? 'hebrew' : 'latin'}.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/styles.css">
-  <script src="/assets/site.js"></script>
   <script src="/assets/a11y.js" defer></script>${jsonLd}
 </head>
 <body class="${page.legal || page.file !== 'index' ? 'doc' : 'home'}">
   <a class="skip" href="#main">${t('דלג לתוכן הראשי', 'Skip to main content')}</a>
   <header class="site-header">
-    <div class="bar">
+    <div class="wrap bar">
       <a class="brand" href="${L('')}" aria-label="${t('PayZo, לעמוד הבית', 'PayZo home')}">
         <img src="/assets/icon.svg" alt="" width="34" height="34">
         <span class="brand-name">PayZo</span><span class="brand-he" lang="he">פייזו</span>
       </a>
       <nav aria-label="${t('ניווט ראשי', 'Main')}">
         <ul class="nav">
-          <li class="nav-hide"><a href="${L('')}#pay">${t('תשלום חכם', 'Smart Pay')}</a></li>
-          <li class="nav-hide"><a href="${L('')}#cards">${t('הכרטיסים', 'Your cards')}</a></li>
+          <li class="nav-hide"><a href="${L('')}#features">${t('מה זה עושה', 'Features')}</a></li>
+          <li class="nav-hide"><a href="${L('')}#how">${t('איך זה עובד', 'How it works')}</a></li>
           <li class="nav-hide"><a href="${L('')}#faq">${t('שאלות', 'FAQ')}</a></li>
           <li><a href="${L('support')}"${cur('support')}>${t('תמיכה', 'Support')}</a></li>
-          <li><a href="${pathFor(other, page.slug)}" hreflang="${other}" lang="${other}">${he ? 'English' : 'עברית'}</a></li>
+          <li><a class="lang" href="${pathFor(other, page.slug)}" hreflang="${other}" lang="${other}">${he ? 'English' : 'עברית'}</a></li>
         </ul>
       </nav>
     </div>
@@ -159,13 +141,13 @@ function layout(lang, page, body) {
 ${draft}${body}
   </main>
   <footer class="site-footer">
-    <div class="tiles">
-      <div class="tile-f t-state">
-        <p class="say">${t('כל כרטיס מתנה שווה כסף. PayZo דואגת שתשתמשו בו.', 'Every gift card is money. PayZo makes sure you spend it.')}</p>
-        <p class="legal">© {{year}} PayZo. ${t('Apple, App Store ו-iPhone הם סימנים מסחריים של Apple Inc. שמות וסימנים של מותגים שייכים לבעליהם, ו-PayZo אינה קשורה אליהם.', 'Apple, App Store and iPhone are trademarks of Apple Inc. Brand names and marks belong to their owners; PayZo is not affiliated with them.')}${page.file === 'index' ? ' ' + t('צילומים: מרכז דיזנגוף ושוק הכרמל (Rakoon ו-NaturalSoundsYEAH!, CC0), מטבע 10 שקלים (Soap, נחלת הכלל), דרך Wikimedia Commons.', 'Photographs: Dizengoff Center and the Carmel Market (Rakoon and NaturalSoundsYEAH!, CC0), 10-shekel coin (Soap, public domain), via Wikimedia Commons.') : ''}</p>
+    <div class="wrap foot">
+      <div class="foot-brand">
+        <a class="brand" href="${L('')}"><img src="/assets/icon.svg" alt="" width="30" height="30"><span class="brand-name">PayZo</span><span class="brand-he" lang="he">פייזו</span></a>
+        <p><a href="mailto:{{supportEmail}}">{{supportEmail}}</a></p>
       </div>
-      <nav class="tile-f t-nav" aria-label="${t('קישורים משפטיים ותמיכה', 'Legal and support')}">
-        <ul>
+      <nav aria-label="${t('קישורים משפטיים ותמיכה', 'Legal and support')}">
+        <ul class="foot-links">
           <li><a href="${L('support')}">${t('תמיכה', 'Support')}</a></li>
           <li><a href="${L('privacy')}">${t('מדיניות פרטיות', 'Privacy Policy')}</a></li>
           <li><a href="${L('terms')}">${t('תנאי שימוש', 'Terms of Use')}</a></li>
@@ -173,19 +155,9 @@ ${draft}${body}
           <li><a href="${L('accessibility')}">${t('הצהרת נגישות', 'Accessibility')}</a></li>
         </ul>
       </nav>
-      <div class="tile-f t-where">
-        <p class="lbl">${t('איפה', 'Where')}</p>
-        <div><p>${t('ישראל', 'Israel')}</p><p class="small">${t('חינם · לאייפון · בעברית ובאנגלית', 'Free · iPhone · Hebrew and English')}</p></div>
-      </div>
-      <div class="tile-f t-mail">
-        <p class="lbl">${t('כתבו לנו', 'Write to us')}</p>
-        <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>
-      </div>
-      <div class="tile-f t-word"><span class="wm">PayZo</span><span class="wm-he" lang="he">פייזו</span></div>
-      <a class="tile-f t-go" href="${cfg.appStoreUrl || L('') + '#pay'}">
-        <span class="go">${cfg.appStoreUrl ? t('להורדה ב-App Store', 'Get it on the App Store') : t('לנסות את התשלום החכם', 'Try Smart Pay')}</span>
-        <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M10 28h34M30 14l14 14-14 14"/></svg>
-      </a>
+    </div>
+    <div class="wrap fine">
+      <p>© {{year}} PayZo. ${t('Apple, App Store ו-iPhone הם סימנים מסחריים של Apple Inc. שמות וסימנים של מותגים שייכים לבעליהם, ו-PayZo אינה קשורה אליהם.', 'Apple, App Store and iPhone are trademarks of Apple Inc. Brand names and marks belong to their owners; PayZo is not affiliated with them.')}</p>
     </div>
   </footer>
 </body>

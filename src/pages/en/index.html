@@ -1,215 +1,212 @@
-    <section class="hero" aria-labelledby="hero-h">
-      <div class="hero-text">
-        <h1 id="hero-h" class="lines"><span class="line"><span data-line>All your gift cards,</span></span><span class="line"><span data-line>spent to the last shekel.</span></span></h1>
-        <div class="after">
-          <p class="lead">PayZo keeps the balance and expiry of every holiday voucher, gift card and store credit. At the till it works out the cheapest way to pay, with the benefits of the cards you already have.</p>
-          <div class="cta-row">{{heroCta}}</div>
-          <p class="hero-note">Free · for iPhone · in Hebrew and English</p>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span>The smart wallet for gift cards</p>
+          <h1>All your gift cards. <em>Used down to the last shekel.</em></h1>
+          <p class="lead">PayZo keeps every gift card, holiday voucher and store credit you own in one place, with the balance and expiry date of each. At the checkout it recommends the best way to pay, including the perks of the credit and club cards you already have.</p>
+          <div class="cta-row">
+            {{storeCta}}
+            <a class="btn btn-ghost" href="#how">How it works</a>
+          </div>
+          <p class="cta-note">Free · for iPhone · in Hebrew and English</p>
         </div>
-      </div>
-      <div class="hero-stage" id="pay">
-        <div data-ui class="pay" role="group" aria-labelledby="pay-h">
-          <div class="pay-head">
-            <h2 class="pay-title" id="pay-h">Smart Pay</h2>
-            <span class="pay-sub">Example wallet · 5 cards · <span class="num">₪1,320</span></span>
+
+        <div class="stage" aria-hidden="true">
+          <div class="fan">
+            <div class="gc gc-1"><span>Fashion</span><b class="num">₪300</b></div>
+            <div class="gc gc-2"><span>Groceries</span><b class="num">₪250</b></div>
+            <div class="gc gc-3"><span>Dining</span><b class="num">₪150</b></div>
           </div>
-          <span class="pay-label" id="store-l">Store</span>
-          <div class="chips" role="group" aria-labelledby="store-l">
-            <button type="button" class="chip" data-cat="fashion" data-amount="480" aria-pressed="true">Fashion</button>
-            <button type="button" class="chip" data-cat="super" data-amount="380" aria-pressed="false">Supermarket</button>
-            <button type="button" class="chip" data-cat="restaurant" data-amount="220" aria-pressed="false">Restaurant</button>
-            <button type="button" class="chip" data-cat="electronics" data-amount="899" aria-pressed="false">Electronics</button>
-          </div>
-          <label class="pay-label" for="pay-amount">Amount at the till</label>
-          <div class="amount">
-            <button type="button" class="step" data-step="-20" aria-label="₪20 less">−</button>
-            <div class="amount-field"><span aria-hidden="true">₪</span><input id="pay-amount" type="text" inputmode="decimal" value="480" autocomplete="off"></div>
-            <button type="button" class="step" data-step="20" aria-label="₪20 more">+</button>
-          </div>
-          <div class="rec" aria-live="polite">
-            <span class="rec-pill">Top recommendation</span>
-            <ul>
-              <li class="disc"><span>Club card 10% off<small>counts as a saving</small></span><b>−₪48</b></li>
-              <li><span>Multi-brand gift card<small>expires 30.11.2026</small></span><b>₪200</b></li>
-              <li><span>Holiday voucher · Fashion<small>expires 31.03.2027</small></span><b>₪232</b></li>
-            </ul>
-            <div class="rec-total">
-              <div><span>From your pocket</span><b data-out="pocket">₪0</b></div>
-              <div class="save"><span>You save</span><b data-out="saving">₪48</b></div>
+          <div class="phone">
+            <div class="screen">
+              <div class="s-title">My wallet</div>
+              <div class="s-total"><small>Available on your cards</small><b class="num">₪1,120</b><small>4 cards</small></div>
+              <div class="s-card"><span class="s-chip c-or"></span><span class="t"><b>Gift voucher · Fashion</b><small>Valid until 03/2027</small></span><span class="s-amt num">₪400</span></div>
+              <div class="s-card"><span class="s-chip c-pu"></span><span class="t"><b>Store credit · Electronics</b><small>Valid until 06/2027</small></span><span class="s-amt num">₪320</span></div>
+              <div class="s-card"><span class="s-chip c-gr"></span><span class="t"><b>Gift card · Groceries</b><small>Valid until 12/2026</small></span><span class="s-amt num">₪250</span></div>
+              <div class="s-card"><span class="s-chip c-sk"></span><span class="t"><b>Gift voucher · Dining</b><small>Valid until 01/2027</small></span><span class="s-amt num">₪150</span></div>
+              <span class="s-btn">Smart Pay</span>
             </div>
           </div>
-          <p class="pay-foot">The card that expires first goes first. A gift card is your own money, so only discounts and cashback count as savings.</p>
         </div>
       </div>
     </section>
 
-    <section class="intro" aria-labelledby="intro-h">
-      <div class="intro-text">
-        <h2 id="intro-h" data-reveal>Gift cards get lost quietly</h2>
-        <p class="first d1" data-reveal>The holiday voucher from work goes into a drawer. The birthday gift card stays in the inbox. The store credit waits in WhatsApp.</p>
-        <p data-reveal>Then the expiry date passes and nobody notices. The money is simply gone.</p>
-        <p data-reveal>PayZo keeps them together, with the balance and expiry of each card, so you always know how much you have and where.</p>
-      </div>
-      <figure class="figure" data-reveal>
-        <img src="/assets/img/dizengoff-center-interior.jpg" width="1400" height="1050" alt="The shopping floors of Dizengoff Center, looking down at the walkways and shoppers" loading="lazy" decoding="async">
-        <figcaption>Dizengoff Center, Tel Aviv.</figcaption>
-      </figure>
-    </section>
-
-    <section class="board-sec" id="cards" aria-labelledby="cards-h">
-      <div class="sec-head">
-        <h2 id="cards-h" data-reveal>All your cards on one screen</h2>
-        <p data-reveal class="d1">The balance and expiry of every card, and where it is accepted. Click a card to open it.</p>
-      </div>
-      <div data-ui class="board" data-reveal>
-        <button type="button" class="row" aria-expanded="false"><span class="nm">Multi-brand gift card</span><span class="f">Balance <b class="num">₪200</b></span><span class="f">Until <b class="num">30.11.2026</b></span><span class="st soon">Expires this month</span><span class="detail">Accepted at fashion chains, restaurants and electronics stores. Number <span class="num">•••• 7710</span>, the code hidden until you need it.</span></button>
-        <button type="button" class="row" aria-expanded="false"><span class="nm">Gift card · Supermarket</span><span class="f">Balance <b class="num">₪250</b></span><span class="f">Until <b class="num">31.12.2026</b></span><span class="st ok">Valid</span><span class="detail">Accepted at the supermarket chain that issued it. Number <span class="num">•••• 3302</span>.</span></button>
-        <button type="button" class="row" aria-expanded="false"><span class="nm">Holiday voucher · Restaurants</span><span class="f">Balance <b class="num">₪150</b></span><span class="f">Until <b class="num">31.01.2027</b></span><span class="st ok">Valid</span><span class="detail">A holiday voucher from work. Accepted at the restaurants on the issuer's list. Number <span class="num">•••• 9046</span>.</span></button>
-        <button type="button" class="row" aria-expanded="true"><span class="nm">Holiday voucher · Fashion</span><span class="f">Balance <b class="num">₪400</b></span><span class="f">Until <b class="num">31.03.2027</b></span><span class="st ok">Valid</span><span class="detail">Accepted at the issuer's fashion chains. Number <span class="num">•••• 4821</span>, the code hidden and shown only when needed. For supported brands, check the balance in one tap.</span></button>
-        <button type="button" class="row" aria-expanded="false"><span class="nm">Store credit · Electronics</span><span class="f">Balance <b class="num">₪320</b></span><span class="f">Until <b class="num">30.06.2027</b></span><span class="st ok">Valid</span><span class="detail">Credit from a returned product. Accepted only at the store that gave it. Number <span class="num">•••• 5517</span>.</span></button>
-        <button type="button" class="row" aria-expanded="false"><span class="nm">Gift card · Books</span><span class="f">Balance <b class="num">₪100</b></span><span class="f">Until <b class="num">31.08.2027</b></span><span class="st ok">Valid</span><span class="detail">Accepted at the bookshop chain. Number <span class="num">•••• 2268</span>.</span></button>
-        <button type="button" class="row" aria-expanded="false"><span class="nm">Holiday voucher · Leisure</span><span class="f">Balance <b class="num">₪0</b></span><span class="f">Until <b class="num">31.12.2026</b></span><span class="st used">Used up</span><span class="detail">Spent in full. It stays on the list so you know you have already used it.</span></button>
-      </div>
-    </section>
-
-    <section class="prefs-sec" aria-labelledby="prefs-h">
-      <div class="sec-head">
-        <h2 id="prefs-h" data-reveal>Smart Pay, by your rules</h2>
-        <p data-reveal class="d1">Switch them here and the recommendation at the top of the page updates.</p>
-      </div>
-      <div class="band f-sky on">
-        <div><p class="sent" id="pr-club">Include your club card benefits</p><p class="cons">On a <span class="num">₪480</span> fashion purchase: 10% off, so <span class="num">₪48</span> less to pay.</p></div>
-        <button type="button" data-ui class="switch" role="switch" aria-checked="true" aria-labelledby="pr-club" data-pref="club"></button>
-      </div>
-      <div class="band f-green on">
-        <div><p class="sent" id="pr-multi">Use multi-brand gift cards</p><p class="cons"><span class="num">₪200</span> more for fashion, restaurants and electronics. It goes first, because the card expires on 30.11.</p></div>
-        <button type="button" data-ui class="switch" role="switch" aria-checked="true" aria-labelledby="pr-multi" data-pref="multi"></button>
-      </div>
-      <div class="band f-amber">
-        <div><p class="sent" id="pr-back">Add your credit card cashback</p><p class="cons">At the supermarket, on <span class="num">₪130</span> paid from your pocket: 5% back, <span class="num">₪6.50</span>.</p></div>
-        <button type="button" data-ui class="switch" role="switch" aria-checked="false" aria-labelledby="pr-back" data-pref="cashback"></button>
-      </div>
-    </section>
-
-    <figure class="rest">
-      <img src="/assets/img/carmel-market.jpg" width="2400" height="1600" alt="Fruit and vegetable stalls at the Carmel Market, shoppers passing between them" loading="lazy" decoding="async">
-      <figcaption>The Carmel Market, Tel Aviv.</figcaption>
-    </figure>
-
-    <section class="agenda-sec" id="benefits" aria-labelledby="ben-h">
-      <div class="agenda-head">
-        <h2 id="ben-h" data-reveal><span class="soft">Which benefit is yours?</span> From your own wallet.</h2>
-        <a class="btn btn-primary" href="#pay" data-reveal>Try Smart Pay</a>
-      </div>
-      <div class="agenda">
-        <div class="tabs" role="tablist" aria-label="Categories" data-reveal>
-          <button type="button" class="tab" role="tab" id="tab-f" aria-controls="p-f" aria-selected="true"><b>Fashion</b><span>3 benefits</span></button>
-          <button type="button" class="tab" role="tab" id="tab-s" aria-controls="p-s" aria-selected="false" tabindex="-1"><b>Supermarket</b><span>3 benefits</span></button>
-          <button type="button" class="tab" role="tab" id="tab-r" aria-controls="p-r" aria-selected="false" tabindex="-1"><b>Restaurants</b><span>2 benefits</span></button>
-          <button type="button" class="tab" role="tab" id="tab-e" aria-controls="p-e" aria-selected="false" tabindex="-1"><b>Electronics</b><span>2 benefits</span></button>
+    <section class="block alt" id="who" aria-labelledby="who-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">Who it's for</p>
+          <h2 id="who-h">For anyone with gift cards who doesn't want to lose a single shekel</h2>
+          <p>Gift cards get lost when they're forgotten in a drawer, an inbox or a WhatsApp chat. PayZo keeps all of them in view.</p>
         </div>
-        <div class="bands d1" data-ui data-reveal>
-          <div class="bnd-panel" id="p-f" role="tabpanel" aria-labelledby="tab-f">
-            <div class="bnd"><span class="fig">10%</span><span class="ttl">Fashion club card<small>On the whole purchase, showing the card at the till</small></span><span class="src"><b>Checked 28.10.2026</b>Source: the club's site</span></div>
-            <div class="bnd"><span class="fig">₪50</span><span class="ttl">Coupon<small>On purchases over <span class="num">₪300</span>, until 31.12.2026</small></span><span class="src"><b>Checked 27.10.2026</b>Source: the chain's site</span></div>
-            <div class="bnd"><span class="fig">3%</span><span class="ttl">Credit card<small>Cashback at fashion chains</small></span><span class="src"><b>Checked 26.10.2026</b>Source: the card issuer's site</span></div>
-          </div>
-          <div class="bnd-panel" id="p-s" role="tabpanel" aria-labelledby="tab-s" hidden>
-            <div class="bnd"><span class="fig">5%</span><span class="ttl">Credit card<small>Cashback at supermarkets, up to <span class="num">₪100</span> a month</small></span><span class="src"><b>Checked 28.10.2026</b>Source: the card issuer's site</span></div>
-            <div class="bnd"><span class="fig">₪15</span><span class="ttl">Coupon<small>On purchases over <span class="num">₪150</span></small></span><span class="src"><b>Checked 25.10.2026</b>Source: the chain's site</span></div>
-            <div class="bnd"><span class="fig">7%</span><span class="ttl">Club card<small>On the chain's own-brand products</small></span><span class="src"><b>Checked 24.10.2026</b>Source: the club's site</span></div>
-          </div>
-          <div class="bnd-panel" id="p-r" role="tabpanel" aria-labelledby="tab-r" hidden>
-            <div class="bnd"><span class="fig">1+1</span><span class="ttl">Club card<small>Coffee and a pastry, Sunday to Thursday</small></span><span class="src"><b>Checked 28.10.2026</b>Source: the club's site</span></div>
-            <div class="bnd"><span class="fig">10%</span><span class="ttl">Credit card<small>On orders over <span class="num">₪120</span></small></span><span class="src"><b>Checked 26.10.2026</b>Source: the card issuer's site</span></div>
-          </div>
-          <div class="bnd-panel" id="p-e" role="tabpanel" aria-labelledby="tab-e" hidden>
-            <div class="bnd"><span class="fig">8%</span><span class="ttl">Club card<small>On accessories, showing the card</small></span><span class="src"><b>Checked 27.10.2026</b>Source: the club's site</span></div>
-            <div class="bnd"><span class="fig">₪100</span><span class="ttl">Coupon<small>On purchases over <span class="num">₪1,000</span></small></span><span class="src"><b>Checked 25.10.2026</b>Source: the chain's site</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="how-sec" id="how" aria-labelledby="how-h">
-      <h2 id="how-h" data-reveal>How it works</h2>
-      <div class="how-body">
-        <ol class="how-steps">
-          <li class="active"><h3>First, add your cards.</h3><p>Gift cards, holiday vouchers and store credit, plus the type of your credit and club cards, without their numbers.</p></li>
-          <li><h3>At the till, open Smart Pay.</h3><p>Pick the store, enter the amount, and get the cheapest way to pay.</p></li>
-          <li><h3>What you don't need, list in the market.</h3><p>Whoever wants the card writes to you in chat, and you agree between you. PayZo is not a party to the deal, and no payments or card transfers happen in the app.</p></li>
-        </ol>
-      <div class="how-stage">
-        <div data-ui class="phone" aria-hidden="true">
-          <div class="state on">
-            <p class="ph-title">Add a gift card</p>
-            <div class="fld"><span>Brand</span>Holiday voucher · Fashion</div>
-            <div class="fld"><span>Amount</span><b class="num">₪400</b></div>
-            <div class="fld"><span>Expiry</span><b class="num">31.03.2027</b></div>
-            <div class="fld"><span>Card number</span><b class="num">•••• 4821</b></div>
-            <div class="fld"><span>Code</span><b>Stored encrypted</b></div>
-            <span class="ph-btn">Save to wallet</span>
-          </div>
-          <div class="state">
-            <p class="ph-title">Smart Pay</p>
-            <div class="fld"><span>Store</span>Fashion</div>
-            <div class="fld"><span>Amount</span><b class="num">₪480</b></div>
-            <div class="fld"><span>Club card 10% off</span><b class="num">−₪48</b></div>
-            <div class="fld"><span>Multi-brand gift card</span><b class="num">₪200</b></div>
-            <div class="fld"><span>Holiday voucher · Fashion</span><b class="num">₪232</b></div>
-            <span class="ph-btn">From your pocket ₪0 · You save ₪48</span>
-          </div>
-          <div class="state">
-            <p class="ph-title">Market</p>
-            <div class="tile"><span class="sw"></span><span><b class="num">₪150 · Restaurants</b><small>Expires 31.01.2027 · asking ₪135</small></span></div>
-            <div class="bub">Hi, is the card still available?</div>
-            <div class="bub me">Yes, we can settle today.</div>
-            <span class="ph-btn">Chat with the seller</span>
-            <p class="ph-note">Payment and hand-over happen between you, outside the app.</p>
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>
-
-    <section class="letter-sec" aria-labelledby="letter-h">
-      <div>
-        <h2 id="letter-h" data-reveal>Your cards stay yours</h2>
-        <p class="aside d1" data-reveal>What happens to the numbers you keep in PayZo, in short.</p>
-      </div>
-      <div class="letter" data-reveal>
-        <div class="who"><img src="/assets/img/penguin.png" width="48" height="48" alt="">PayZo · פייזו</div>
-        <p>When you give an app your card numbers, you deserve to know what happens to them. So here it is, no small print.</p>
-        <p><mark>Card numbers and codes are stored encrypted</mark> and shown only to the card's owner. For benefits you choose only the type of credit card, never its number.</p>
-        <p>No ads and no trackers, and we never sell data. Every seller in the market is approved before they can list a card.</p>
-        <p>And if you want to leave: delete your account from inside the app, at any time. You can also report and block a user.</p>
-        <p class="sign">Guy Moshe Forer</p>
-        <p class="role">Founder of PayZo</p>
-      </div>
-    </section>
-
-    <section class="faq-sec" id="faq" aria-labelledby="faq-h">
-      <div>
-        <h2 id="faq-h" data-reveal>Questions</h2>
-        <ul class="qlist d1" data-reveal>
-          <li><button type="button" class="q" aria-expanded="false">How much does it cost?</button><div class="ans"><p>PayZo is free to download and use.</p></div></li>
-          <li><button type="button" class="q" aria-expanded="false">Can I buy cards in the app?</button><div class="ans"><p>Not at this stage. No payments happen in the app. You keep and manage cards, get Smart Pay recommendations, list cards in the market and chat with other users.</p></div></li>
-          <li><button type="button" class="q" aria-expanded="false">Are my card details safe?</button><div class="ans"><p>Card numbers and security codes are stored encrypted and shown only to the card's owner. We don't store credit card numbers: for benefits you choose only the card type.</p></div></li>
-          <li><button type="button" class="q" aria-expanded="false">How does the market work?</button><div class="ans"><p>List a card you don't need, and whoever wants it writes to you in chat. The app doesn't move cards or money between users, and PayZo is not a party to deals: whatever you agree happens outside the app and at your own responsibility.</p></div></li>
-          <li><button type="button" class="q" aria-expanded="false">Which cards can I add?</button><div class="ans"><p>Gift cards, holiday vouchers and store credit from chains in Israel: fashion, food, electronics, leisure and more. The list of brands keeps growing.</p></div></li>
-          <li><button type="button" class="q" aria-expanded="false">Is there an Android version?</button><div class="ans"><p>At first, PayZo is available for iPhone.</p></div></li>
-          <li><button type="button" class="q" aria-expanded="false">How do I delete my account?</button><div class="ans"><p>In the app: Profile → Delete account. The details are on the <a href="/en/delete-account/">Delete your account</a> page.</p></div></li>
-          <li><button type="button" class="q" aria-expanded="false">Who is behind PayZo?</button><div class="ans"><p>PayZo is developed and run in Israel. Write to us at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>.</p></div></li>
+        <ul class="who">
+          <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M3 12h18M12 8v13M12 8c-1.5-3-5-3.5-5-1s3.5 1 5 1zm0 0c1.5-3 5-3.5 5-1s-3.5 1-5 1z"/></svg></span><h3>You got a holiday voucher</h3><p>From work, family or friends. Save it in the app and always know how much is left and until when.</p></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="16" height="11" rx="2"/><path d="M6 3h14a2 2 0 0 1 2 2v9M2 10h16"/></svg></span><h3>You carry several credit and club cards</h3><p>PayZo shows which card gets you the best perk at each retailer.</p></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg></span><h3>You got a card you won't use</h3><p>List it on the marketplace and find someone who actually wants it.</p></li>
+          <li><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.2 5.3L20 9l-4.3 3.9L17 19l-5-3-5 3 1.3-6.1L4 9l5.8-.7z"/></svg></span><h3>You like saving without the effort</h3><p>No spreadsheets, no math. Pick a store and an amount and get a recommendation.</p></li>
         </ul>
       </div>
-      <div class="pane" aria-hidden="true"><p class="pane-q"></p><div class="pane-a"></div></div>
     </section>
 
-    <section class="cta-photo" aria-labelledby="cta-h">
-      <img src="/assets/img/shekel-coin.jpg" width="2400" height="1800" alt="A 10-shekel coin standing on its edge on a wooden table" loading="lazy" decoding="async">
-      <div class="cta-text">
-        <h2 id="cta-h" data-reveal>To the last shekel.</h2>
-        <p data-reveal class="d1">{{storeLine}} Add your cards once, and at the till you know how to pay.</p>
-        <div class="cta-row d2" data-reveal>{{closeCta}}</div>
+    <section class="block" id="features" aria-labelledby="features-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">What PayZo does</p>
+          <h2 id="features-h">Four tools, one goal: pay less</h2>
+        </div>
+
+        <div class="feature">
+          <div class="f-text">
+            <h3>One wallet for every card</h3>
+            <p>Add any gift card, holiday voucher or store credit, with its number, amount and expiry date, and see them all on one screen.</p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Balance and expiry for every card</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Card codes stay hidden until you need them</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>For supported brands, check the balance in one tap</li>
+            </ul>
+          </div>
+          <div class="f-media" aria-hidden="true">
+            <div class="phone sm"><div class="screen">
+              <div class="s-title">Gift voucher · Fashion</div>
+              <div class="s-total"><small>Balance</small><b class="num">₪400</b><small>Valid until 03/2027</small></div>
+              <div class="s-field"><span>Card number</span><b class="num">•••• 4821</b></div>
+              <div class="s-field"><span>Code</span><b>••••</b></div>
+              <span class="s-btn">Show code</span>
+              <span class="s-btn">Check balance</span>
+            </div></div>
+          </div>
+        </div>
+
+        <div class="feature flip">
+          <div class="f-text">
+            <h3>Smart Pay</h3>
+            <p>Pick a store and enter the amount. PayZo looks at everything you have, from gift cards and store credit to credit and club card perks, coupons and discounts, and ranks the ways to pay.</p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Combines several cards in one payment</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Shows what you save and what you pay at the till</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>The best option comes first</li>
+            </ul>
+          </div>
+          <div class="f-media" aria-hidden="true">
+            <div class="phone sm"><div class="screen">
+              <div class="s-title">Smart Pay</div>
+              <div class="s-field"><span>Store</span><b>Fashion</b></div>
+              <div class="s-field"><span>Amount</span><b class="num">₪432</b></div>
+              <div class="s-rec">
+                <span class="s-pill p-green">Top pick</span>
+                <div class="pills"><span class="s-pill p-sky">Club perk 10%</span><span class="s-pill p-sky">Voucher ₪200</span></div>
+                <div>Pay at the till <b class="num">₪188.80</b></div>
+                <div class="save num">You save ₪43.20</div>
+              </div>
+              <span class="s-btn">Payment details</span>
+            </div></div>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="f-text">
+            <h3>Perks and coupons</h3>
+            <p>Add your credit and club cards (just the card type, never the number) and see which perk you get at each retailer. Plus active coupons.</p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Every card's perks in one place</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Coupons by category</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Automatically factored into Smart Pay</li>
+            </ul>
+          </div>
+          <div class="f-media" aria-hidden="true">
+            <div class="phone sm"><div class="screen">
+              <div class="s-title">My perks</div>
+              <div class="s-card"><span class="s-chip c-sk"></span><span class="t"><b>Club card</b><small>10% off at fashion chains</small></span></div>
+              <div class="s-card"><span class="s-chip c-gr"></span><span class="t"><b>Credit card</b><small>5% back at supermarkets</small></span></div>
+              <div class="s-card"><span class="s-chip c-pu"></span><span class="t"><b>Coupon</b><small>₪15 off purchases over ₪100</small></span></div>
+              <div class="s-card"><span class="s-chip c-or"></span><span class="t"><b>Club card</b><small>Buy one coffee, get one free</small></span></div>
+            </div></div>
+          </div>
+        </div>
+
+        <div class="feature flip">
+          <div class="f-text">
+            <h3>Card marketplace</h3>
+            <p>A card that doesn't suit you is worth more to someone else. List it on the marketplace, anyone interested messages you in the built-in chat, and you work out the details between you.</p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Listings show the brand, amount and expiry</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Built-in chat with reporting and blocking</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>Sellers are approved before they can list</li>
+            </ul>
+            <p class="note">In this version no payments or card transfers are made through the app. PayZo is not a party to deals between users: anyone who chooses to pay another user or give them a card does so outside the app and at their own risk.</p>
+          </div>
+          <div class="f-media" aria-hidden="true">
+            <div class="phone sm"><div class="screen">
+              <div class="s-title">Marketplace</div>
+              <div class="s-list">
+                <div class="s-tile"><div class="hero-c c-or"></div><div class="b"><b class="num">₪300 · Fashion</b><small>Expires 03/2027</small></div></div>
+                <div class="s-tile"><div class="hero-c c-gr"></div><div class="b"><b class="num">₪200 · Groceries</b><small>Expires 12/2026</small></div></div>
+              </div>
+              <div class="s-bubble">Yes, the fashion card is still available</div>
+              <div class="s-bubble me">Great, thanks!</div>
+              <span class="s-btn">Chat with seller</span>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block alt" id="how" aria-labelledby="how-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">How it works</p>
+          <h2 id="how-h">Three steps and you're set</h2>
+        </div>
+        <ol class="steps">
+          <li><h3>Add your cards</h3><p>Gift cards, holiday vouchers and store credit, plus your credit and club cards.</p></li>
+          <li><h3>Open Smart Pay at the checkout</h3><p>Pick the store and amount and get the best way to pay.</p></li>
+          <li><h3>List what you don't need</h3><p>A card that doesn't suit you goes on the marketplace, and anyone interested messages you in the chat.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="block" id="trust" aria-labelledby="trust-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">Privacy and security</p>
+          <h2 id="trust-h">Your cards stay yours</h2>
+        </div>
+        <div class="trust">
+          <div><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><div><h3>Encrypted</h3><p>Card numbers and codes are stored encrypted and shown only to the card's owner.</p></div></div>
+          <div><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></span><div><h3>No ads, no selling data</h3><p>We don't sell your information or use it for advertising. The app has no tracking tools.</p></div></div>
+          <div><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span><div><h3>Approved sellers</h3><p>Every seller is approved before they can list a card on the marketplace.</p></div></div>
+          <div><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></span><div><h3>You're in control</h3><p>Report or block a user, and delete your account from inside the app at any time.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block alt" id="faq" aria-labelledby="faq-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">FAQ</p>
+          <h2 id="faq-h">Good to know</h2>
+        </div>
+        <div class="faq">
+          <details><summary>How much does it cost?</summary><div><p>PayZo is free to download and use.</p></div></details>
+          <details><summary>Can I buy gift cards in the app?</summary><div><p>Not at this stage. No payments are made in the app. You can store and manage cards, get Smart Pay recommendations, list cards on the marketplace and chat with other users.</p></div></details>
+          <details><summary>Are my card details safe?</summary><div><p>Card numbers and security codes are stored encrypted and shown only to the card's owner. We never store credit card numbers: for perks you only pick the card type.</p></div></details>
+          <details><summary>How does the marketplace work?</summary><div><p>You list a card you don't need, and anyone interested messages you in the chat. You agree on the details between you. The app doesn't move cards or money between users, and PayZo isn't a party to deals between you: anything you agree on happens outside the app and at your own risk.</p></div></details>
+          <details><summary>Which cards and brands can I add?</summary><div><p>Gift cards, holiday vouchers and store credit from retailers in Israel, in areas such as fashion, food, electronics and leisure. The brand list keeps growing.</p></div></details>
+          <details><summary>Is there an Android version?</summary><div><p>PayZo is launching on iPhone first.</p></div></details>
+          <details><summary>How do I delete my account?</summary><div><p>In the app: Profile → Delete account. Full details are on the <a href="/en/delete-account/">Delete your account</a> page.</p></div></details>
+          <details><summary>Who is behind PayZo?</summary><div><p>PayZo is developed and operated in Israel. Reach us at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="wrap">
+        <div class="band">
+          <div>
+            <h2>Put your gift cards to work</h2>
+            <p>PayZo arrives on the App Store on {{launchDateEn}}.</p>
+          </div>
+          {{storeCta}}
+        </div>
       </div>
     </section>
